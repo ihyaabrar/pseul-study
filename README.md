@@ -1,8 +1,11 @@
-<h1 align="center">PSEUL study</h1>
+<p align="center">
+  <img src="assets/pseul-logo.png" alt="PSEUL" width="440">
+</p>
+
+<h3 align="center">Study code, frozen registries and results</h3>
 
 <p align="center">
-  Code, frozen registries and results behind<br>
-  <b>PSEUL: Prediction-Landmark Leakage Control for Feature Selection in Clinical Prediction Models</b>
+  Everything behind <b>PSEUL: Prediction-Landmark Leakage Control for Feature Selection in Clinical Prediction Models</b>
 </p>
 
 <p align="center">
@@ -20,8 +23,14 @@ here, `scripts/pseul.py`, is the exact version the study ran, and the package is
 tested to stay byte-identical to it.
 
 <p align="center">
-  <img src="experiments/pseul_scopus_study/revision_v2/outputs/figures/fig01_study_workflow.png" alt="Study workflow: freeze the analysis registry, split 80:20 with seed 42, run nested modelling with train-only preprocessing and 3 inner folds, pool out-of-fold predictions, audit the selected subsets, refit on the full development set, and evaluate the reserved internal test once" width="820">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/study-workflow-dark.png">
+    <img src="assets/study-workflow-light.png" alt="Study workflow: a frozen registry and a stratified 80:20 split with seed 42; the development set goes through 5 outer folds with train-only imputation, 3 inner fits of PSEUL and 8 comparators, and one out-of-fold prediction per record; results are pooled and audited, the pipeline is refit on the full development set, and the sealed internal test is opened once for the final estimate" width="900">
+  </picture>
 </p>
+
+The diagram source is [`docs/study-workflow.archify.json`](docs/study-workflow.archify.json).
+An interactive version is in [`docs/study-workflow.html`](docs/study-workflow.html).
 
 ## Scenarios
 
@@ -86,6 +95,8 @@ experiments/pseul_scopus_study/
     test_revision_v2.py             9 tests
     outputs/                        every result the paper reports
 docs/research/                      estimands, expert-scoring protocol, results audit
+docs/study-workflow.*               archify source and interactive view of the diagram above
+assets/                             logo and the light/dark exports of the diagram
 ```
 
 ## Setup
