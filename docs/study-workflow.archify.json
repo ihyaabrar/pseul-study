@@ -1,0 +1,255 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "How the PSEUL study was run",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "database": {
+          "label": "Data"
+        },
+        "backend": {
+          "label": "Computation"
+        },
+        "security": {
+          "label": "Sealed test"
+        },
+        "frontend": {
+          "label": "Result"
+        }
+      }
+    },
+    "viewBox": [
+      1024,
+      652
+    ]
+  },
+  "lanes": [
+    {
+      "id": "prep",
+      "label": "Data preparation"
+    },
+    {
+      "id": "nested",
+      "label": "Nested cross-validation"
+    },
+    {
+      "id": "final",
+      "label": "Audit and refit"
+    },
+    {
+      "id": "sealed",
+      "label": "Reserved internal test"
+    }
+  ],
+  "phases": [
+    {
+      "id": "prepare",
+      "label": "Prepare",
+      "fromCol": 0,
+      "toCol": 1
+    },
+    {
+      "id": "cv",
+      "label": "Develop with nested CV",
+      "fromCol": 2,
+      "toCol": 4,
+      "variant": "emphasis"
+    },
+    {
+      "id": "estimate",
+      "label": "Estimate",
+      "fromCol": 5,
+      "toCol": 5
+    }
+  ],
+  "mainPath": [
+    "registry",
+    "split",
+    "dev",
+    "outer",
+    "inner",
+    "oof",
+    "audit",
+    "refit",
+    "estimate"
+  ],
+  "nodes": [
+    {
+      "id": "registry",
+      "lane": "prep",
+      "col": 0,
+      "type": "database",
+      "label": "Registry",
+      "sublabel": "frozen: landmark, traps",
+      "width": 132
+    },
+    {
+      "id": "split",
+      "lane": "prep",
+      "col": 1,
+      "type": "backend",
+      "label": "80:20 split",
+      "sublabel": "stratified, seed 42",
+      "width": 132
+    },
+    {
+      "id": "dev",
+      "lane": "prep",
+      "col": 2,
+      "type": "database",
+      "label": "Development",
+      "sublabel": "80% for modelling",
+      "width": 132
+    },
+    {
+      "id": "outer",
+      "lane": "nested",
+      "col": 2,
+      "type": "backend",
+      "label": "Outer fold ×5",
+      "sublabel": "train-only imputation",
+      "width": 132
+    },
+    {
+      "id": "inner",
+      "lane": "nested",
+      "col": 3,
+      "type": "backend",
+      "label": "Inner fits ×3",
+      "sublabel": "PSEUL + 8 comparators",
+      "width": 132
+    },
+    {
+      "id": "oof",
+      "lane": "nested",
+      "col": 4,
+      "type": "backend",
+      "label": "Validate fold",
+      "sublabel": "one OOF per record",
+      "width": 132
+    },
+    {
+      "id": "audit",
+      "lane": "final",
+      "col": 4,
+      "type": "frontend",
+      "label": "Pool and audit",
+      "sublabel": "paired bootstrap, traps",
+      "width": 132
+    },
+    {
+      "id": "refit",
+      "lane": "final",
+      "col": 5,
+      "type": "backend",
+      "label": "Refit",
+      "sublabel": "full development set",
+      "width": 132
+    },
+    {
+      "id": "test",
+      "lane": "sealed",
+      "col": 1,
+      "type": "security",
+      "label": "Internal test",
+      "sublabel": "20%, sealed until the end",
+      "width": 132
+    },
+    {
+      "id": "estimate",
+      "lane": "sealed",
+      "col": 5,
+      "type": "frontend",
+      "label": "Test estimate",
+      "sublabel": "evaluated once",
+      "width": 132
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-reg-split",
+      "from": "registry",
+      "to": "split",
+      "role": "main"
+    },
+    {
+      "id": "e-split-dev",
+      "from": "split",
+      "to": "dev",
+      "role": "main"
+    },
+    {
+      "id": "e-split-test",
+      "from": "split",
+      "to": "test",
+      "role": "branch",
+      "variant": "security"
+    },
+    {
+      "id": "e-dev-outer",
+      "from": "dev",
+      "to": "outer",
+      "role": "main"
+    },
+    {
+      "id": "e-outer-inner",
+      "from": "outer",
+      "to": "inner",
+      "role": "main"
+    },
+    {
+      "id": "e-inner-oof",
+      "from": "inner",
+      "to": "oof",
+      "role": "main"
+    },
+    {
+      "id": "e-oof-audit",
+      "from": "oof",
+      "to": "audit",
+      "role": "main"
+    },
+    {
+      "id": "e-audit-refit",
+      "from": "audit",
+      "to": "refit",
+      "role": "main"
+    },
+    {
+      "id": "e-refit-estimate",
+      "from": "refit",
+      "to": "estimate",
+      "role": "main",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e-test-estimate",
+      "from": "test",
+      "to": "estimate",
+      "label": "opened once",
+      "role": "branch",
+      "variant": "security"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Five scenarios",
+      "items": [
+        "Four public datasets, five prediction landmarks",
+        "Every selector sees the same outer folds"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Leakage guards",
+      "items": [
+        "Imputation is fitted inside each training partition",
+        "The internal test is read once, after the final refit"
+      ]
+    }
+  ]
+}
