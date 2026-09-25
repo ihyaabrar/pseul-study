@@ -1,0 +1,16 @@
+# Datasets come from their public deposits (see README); they are not
+# redistributed here.
+data/
+
+# Dataset caches and raw per-record predictions written by the pipeline
+experiments/pseul_scopus_study/revision_v2/cache/
+**/oof_predictions.csv
+**/*_oof_predictions.csv
+
+# Output folders the legacy single-study scripts create when imported
+experiments/pseul_scopus_study/outputs*/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

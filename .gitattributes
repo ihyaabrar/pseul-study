@@ -1,0 +1,3 @@
+# Store every file byte for byte, so the SHA-256 manifest holds on any clone
+# (scripts/pseul.py mixes CRLF and LF line endings exactly as it ran).
+* -text

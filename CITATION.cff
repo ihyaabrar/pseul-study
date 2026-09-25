@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below. The paper they support is under review."
+title: "PSEUL study: code and results for 'PSEUL: Prediction-Landmark Leakage Control for Feature Selection in Clinical Prediction Models'"
+version: 1.0.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/ihyaabrar/pseul-study"
+keywords:
+  - feature selection
+  - data leakage
+  - prediction landmark
+  - clinical machine learning
+  - nested evaluation
+  - reproducibility
+authors:
+  - family-names: Abrar
+    given-names: "Ihya' Nashirudin"
+    orcid: "https://orcid.org/0009-0004-3993-3585"
+    affiliation: "Universitas Ahmad Dahlan"
+references:
+  - type: software
+    title: "PSEUL: prediction-landmark-aware feature selection for medical machine learning"
+    authors:
+      - family-names: Abrar
+        given-names: "Ihya' Nashirudin"
+    repository-code: "https://github.com/ihyaabrar/pseul"
+    version: 0.1.0
