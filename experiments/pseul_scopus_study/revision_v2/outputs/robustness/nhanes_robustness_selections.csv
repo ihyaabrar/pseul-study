@@ -1,0 +1,66 @@
+fold,variant,features,n_features,designated_traps_selected
+1,Reference,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Without predictive utility P,"[""bmi"", ""age"", ""prediabetes_told"", ""waist"", ""diastolic_bp"", ""race_ethnicity"", ""weight"", ""sedentary_minutes""]",8,0
+1,Without SHAP stability S,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol"", ""race_ethnicity""]",8,0
+1,Without evidence E,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""total_cholesterol"", ""education"", ""weight""]",8,0
+1,Without clinical utility U,"[""age"", ""bmi"", ""prediabetes_told"", ""race_ethnicity"", ""diastolic_bp"", ""total_cholesterol"", ""waist"", ""education""]",8,0
+1,Without soft leakage penalty,"[""prediabetes_told"", ""age"", ""bmi"", ""diastolic_bp"", ""waist"", ""race_ethnicity"", ""total_cholesterol"", ""weight""]",8,0
+1,Without redundancy penalty,"[""age"", ""bmi"", ""waist"", ""prediabetes_told"", ""weight"", ""diastolic_bp"", ""systolic_bp"", ""race_ethnicity""]",8,0
+1,Without semantic veto,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Semantic veto 0.75,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Semantic veto 0.95,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Score floor 0.10,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Score floor 0.30,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity"", ""waist"", ""sedentary_minutes"", ""total_cholesterol""]",8,0
+1,Top-k ceiling 5,"[""age"", ""bmi"", ""prediabetes_told"", ""diastolic_bp"", ""race_ethnicity""]",5,0
+2,Reference,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Without predictive utility P,"[""bmi"", ""age"", ""sedentary_minutes"", ""prediabetes_told"", ""waist"", ""total_cholesterol"", ""systolic_bp"", ""race_ethnicity""]",8,0
+2,Without SHAP stability S,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol"", ""race_ethnicity""]",8,0
+2,Without evidence E,"[""age"", ""bmi"", ""sedentary_minutes"", ""prediabetes_told"", ""total_cholesterol"", ""ever_smoked"", ""hdl_cholesterol"", ""race_ethnicity""]",8,0
+2,Without clinical utility U,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""race_ethnicity"", ""total_cholesterol"", ""hdl_cholesterol"", ""systolic_bp""]",8,0
+2,Without soft leakage penalty,"[""age"", ""prediabetes_told"", ""bmi"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""race_ethnicity"", ""systolic_bp""]",8,0
+2,Without redundancy penalty,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol"", ""weight""]",8,0
+2,Without semantic veto,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Semantic veto 0.75,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Semantic veto 0.95,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Score floor 0.10,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Score floor 0.30,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+2,Top-k ceiling 5,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol""]",5,0
+3,Reference,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Without predictive utility P,"[""bmi"", ""age"", ""waist"", ""prediabetes_told"", ""sedentary_minutes"", ""weight"", ""diastolic_bp"", ""total_cholesterol""]",8,0
+3,Without SHAP stability S,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""systolic_bp"", ""race_ethnicity""]",8,0
+3,Without evidence E,"[""age"", ""bmi"", ""total_cholesterol"", ""prediabetes_told"", ""sedentary_minutes"", ""diastolic_bp"", ""waist"", ""income_ratio""]",8,0
+3,Without clinical utility U,"[""age"", ""bmi"", ""prediabetes_told"", ""total_cholesterol"", ""sedentary_minutes"", ""waist"", ""diastolic_bp"", ""race_ethnicity""]",8,0
+3,Without soft leakage penalty,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Without redundancy penalty,"[""age"", ""bmi"", ""waist"", ""prediabetes_told"", ""weight"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp""]",8,0
+3,Without semantic veto,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Semantic veto 0.75,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Semantic veto 0.95,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Score floor 0.10,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Score floor 0.30,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""weight""]",8,0
+3,Top-k ceiling 5,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes""]",5,0
+4,Reference,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Without predictive utility P,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""waist"", ""race_ethnicity"", ""systolic_bp"", ""weight""]",8,0
+4,Without SHAP stability S,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol"", ""race_ethnicity""]",8,0
+4,Without evidence E,"[""age"", ""prediabetes_told"", ""sedentary_minutes"", ""bmi"", ""total_cholesterol"", ""ever_smoked"", ""race_ethnicity"", ""income_ratio""]",8,0
+4,Without clinical utility U,"[""age"", ""prediabetes_told"", ""bmi"", ""sedentary_minutes"", ""race_ethnicity"", ""total_cholesterol"", ""income_ratio"", ""sex_male""]",8,0
+4,Without soft leakage penalty,"[""age"", ""prediabetes_told"", ""bmi"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""race_ethnicity"", ""systolic_bp""]",8,0
+4,Without redundancy penalty,"[""age"", ""prediabetes_told"", ""bmi"", ""waist"", ""weight"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol""]",8,0
+4,Without semantic veto,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Semantic veto 0.75,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Semantic veto 0.95,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Score floor 0.10,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Score floor 0.30,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""race_ethnicity"", ""waist"", ""systolic_bp""]",8,0
+4,Top-k ceiling 5,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol""]",5,0
+5,Reference,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Without predictive utility P,"[""bmi"", ""age"", ""prediabetes_told"", ""waist"", ""weight"", ""sedentary_minutes"", ""diastolic_bp"", ""income_ratio""]",8,0
+5,Without SHAP stability S,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""sedentary_minutes"", ""systolic_bp"", ""total_cholesterol"", ""race_ethnicity""]",8,0
+5,Without evidence E,"[""age"", ""prediabetes_told"", ""weight"", ""total_cholesterol"", ""income_ratio"", ""diastolic_bp"", ""sedentary_minutes"", ""ever_smoked""]",8,0
+5,Without clinical utility U,"[""age"", ""prediabetes_told"", ""bmi"", ""sex_male"", ""total_cholesterol"", ""income_ratio"", ""race_ethnicity"", ""sedentary_minutes""]",8,0
+5,Without soft leakage penalty,"[""prediabetes_told"", ""age"", ""bmi"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Without redundancy penalty,"[""age"", ""bmi"", ""prediabetes_told"", ""waist"", ""weight"", ""diastolic_bp"", ""sedentary_minutes"", ""systolic_bp""]",8,0
+5,Without semantic veto,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Semantic veto 0.75,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Semantic veto 0.95,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Score floor 0.10,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Score floor 0.30,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""waist"", ""diastolic_bp"", ""weight""]",8,0
+5,Top-k ceiling 5,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol""]",5,0

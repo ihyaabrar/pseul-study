@@ -1,0 +1,6 @@
+study,rows,analysis_subsample,positive_rate,outer_splits,train_validation_isolation,train_only_imputation,locked_test_evaluated
+adherence,24071,24071,0.401686676914129,5,True,True,True
+nhanes,7806,7806,0.16692287983602358,5,True,True,True
+brfss,453241,50000,0.14519648487228648,5,True,True,True
+diabetes130_admission,71518,40000,0.08799183422355211,5,True,True,True
+diabetes130_discharge,69973,40000,0.08970602946850928,5,True,True,True

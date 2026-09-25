@@ -1,0 +1,56 @@
+study,method,mean_pairwise_jaccard,min_pairwise_jaccard,n_outer_folds
+adherence,All Features,1.0,1.0,5
+adherence,Availability Gate + SHAP,0.8666666666666666,0.6666666666666666,5
+adherence,LightGBM Gain,1.0,1.0,5
+adherence,Mutual Information,0.5714285714285714,0.4285714285714285,5
+adherence,Oracle Trap Exclusion + SHAP,1.0,1.0,5
+adherence,PSEUL-Audit,0.8666666666666668,0.6666666666666666,5
+adherence,PSEUL-Auto (leakage metadata null),1.0,1.0,5
+adherence,PSEUL-Select,1.0,1.0,5
+adherence,Permutation Importance,1.0,1.0,5
+adherence,SHAP Ranking,0.8666666666666666,0.6666666666666666,5
+adherence,Semantic Veto + SHAP,0.8,0.6666666666666666,5
+nhanes,All Features,1.0,1.0,5
+nhanes,Availability Gate + SHAP,0.7911111111111111,0.6,5
+nhanes,LightGBM Gain,0.8444444444444443,0.7777777777777778,5
+nhanes,Mutual Information,0.6888888888888889,0.6,5
+nhanes,Oracle Trap Exclusion + SHAP,0.7822222222222222,0.6,5
+nhanes,PSEUL-Audit,0.7866666666666667,0.6,5
+nhanes,PSEUL-Auto (leakage metadata null),0.8400000000000001,0.6,5
+nhanes,PSEUL-Select,0.7511111111111111,0.6,5
+nhanes,Permutation Importance,0.7066666666666667,0.6,5
+nhanes,SHAP Ranking,0.7911111111111111,0.6,5
+nhanes,Semantic Veto + SHAP,0.7822222222222223,0.6,5
+brfss,All Features,1.0,1.0,5
+brfss,Availability Gate + SHAP,1.0,1.0,5
+brfss,LightGBM Gain,0.7466666666666667,0.6,5
+brfss,Mutual Information,0.8444444444444443,0.7777777777777778,5
+brfss,Oracle Trap Exclusion + SHAP,1.0,1.0,5
+brfss,PSEUL-Audit,1.0,1.0,5
+brfss,PSEUL-Auto (leakage metadata null),1.0,1.0,5
+brfss,PSEUL-Select,1.0,1.0,5
+brfss,Permutation Importance,0.7155555555555555,0.6,5
+brfss,SHAP Ranking,1.0,1.0,5
+brfss,Semantic Veto + SHAP,0.8222222222222222,0.7777777777777778,5
+diabetes130_admission,All Features,1.0,1.0,5
+diabetes130_admission,Availability Gate + SHAP,0.7666666666666667,0.6666666666666666,5
+diabetes130_admission,LightGBM Gain,1.0,1.0,5
+diabetes130_admission,Mutual Information,0.4642857142857142,0.25,5
+diabetes130_admission,Oracle Trap Exclusion + SHAP,0.7666666666666667,0.6666666666666666,5
+diabetes130_admission,PSEUL-Audit,0.7666666666666666,0.6666666666666666,5
+diabetes130_admission,PSEUL-Auto (leakage metadata null),0.7666666666666666,0.6666666666666666,5
+diabetes130_admission,PSEUL-Select,0.7666666666666666,0.6666666666666666,5
+diabetes130_admission,Permutation Importance,0.4404761904761904,0.25,5
+diabetes130_admission,SHAP Ranking,0.6761904761904762,0.4285714285714285,5
+diabetes130_admission,Semantic Veto + SHAP,0.7666666666666667,0.6666666666666666,5
+diabetes130_discharge,All Features,1.0,1.0,5
+diabetes130_discharge,Availability Gate + SHAP,1.0,1.0,5
+diabetes130_discharge,LightGBM Gain,0.8,0.6666666666666666,5
+diabetes130_discharge,Mutual Information,0.4619047619047619,0.25,5
+diabetes130_discharge,Oracle Trap Exclusion + SHAP,1.0,1.0,5
+diabetes130_discharge,PSEUL-Audit,0.7333333333333333,0.6666666666666666,5
+diabetes130_discharge,PSEUL-Auto (leakage metadata null),0.8,0.6666666666666666,5
+diabetes130_discharge,PSEUL-Select,0.6857142857142857,0.4285714285714285,5
+diabetes130_discharge,Permutation Importance,0.6952380952380952,0.4285714285714285,5
+diabetes130_discharge,SHAP Ranking,1.0,1.0,5
+diabetes130_discharge,Semantic Veto + SHAP,1.0,1.0,5

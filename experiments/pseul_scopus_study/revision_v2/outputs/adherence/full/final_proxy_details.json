@@ -1,0 +1,17 @@
+{
+  "PSEUL-Auto control audit": {
+    "same_seed_and_inner_folds": true,
+    "retained_metadata": [
+      "evidence",
+      "topic_similarity",
+      "utility",
+      "availability"
+    ],
+    "nulled_metadata": [
+      "label_derived_risk",
+      "definitional_overlap",
+      "target_proxy_strength"
+    ],
+    "max_abs_signal_difference": 0.0
+  }
+}

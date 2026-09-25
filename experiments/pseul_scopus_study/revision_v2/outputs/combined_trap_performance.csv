@@ -1,0 +1,56 @@
+study,method,n_designated_traps,mean_trap_selection_frequency,traps_ever_selected
+adherence,All Features,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,Availability Gate + SHAP,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,LightGBM Gain,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,Mutual Information,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,Oracle Trap Exclusion + SHAP,2,0.0,none
+adherence,PSEUL-Audit,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,PSEUL-Auto (leakage metadata null),2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,PSEUL-Select,2,0.5,ANNUALCLAIMAMOUNT
+adherence,Permutation Importance,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,SHAP Ranking,2,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,Semantic Veto + SHAP,2,0.5,ANNUALCLAIMAMOUNT
+nhanes,All Features,2,1.0,"fasting_glucose, hba1c"
+nhanes,Availability Gate + SHAP,2,1.0,"fasting_glucose, hba1c"
+nhanes,LightGBM Gain,2,0.6,"fasting_glucose, hba1c"
+nhanes,Mutual Information,2,1.0,"fasting_glucose, hba1c"
+nhanes,Oracle Trap Exclusion + SHAP,2,0.0,none
+nhanes,PSEUL-Audit,2,1.0,"fasting_glucose, hba1c"
+nhanes,PSEUL-Auto (leakage metadata null),2,1.0,"fasting_glucose, hba1c"
+nhanes,PSEUL-Select,2,0.0,none
+nhanes,Permutation Importance,2,1.0,"fasting_glucose, hba1c"
+nhanes,SHAP Ranking,2,1.0,"fasting_glucose, hba1c"
+nhanes,Semantic Veto + SHAP,2,0.0,none
+brfss,All Features,4,1.0,"diabetes_age, diabetes_age_observed, insulin_use, insulin_use_observed"
+brfss,Availability Gate + SHAP,4,0.75,"diabetes_age, diabetes_age_observed, insulin_use_observed"
+brfss,LightGBM Gain,4,0.45,"diabetes_age, insulin_use_observed"
+brfss,Mutual Information,4,1.0,"diabetes_age, diabetes_age_observed, insulin_use, insulin_use_observed"
+brfss,Oracle Trap Exclusion + SHAP,4,0.0,none
+brfss,PSEUL-Audit,4,1.0,"diabetes_age, diabetes_age_observed, insulin_use, insulin_use_observed"
+brfss,PSEUL-Auto (leakage metadata null),4,0.75,"diabetes_age, diabetes_age_observed, insulin_use"
+brfss,PSEUL-Select,4,0.0,none
+brfss,Permutation Importance,4,1.0,"diabetes_age, diabetes_age_observed, insulin_use, insulin_use_observed"
+brfss,SHAP Ranking,4,0.75,"diabetes_age, diabetes_age_observed, insulin_use_observed"
+brfss,Semantic Veto + SHAP,4,0.0,none
+diabetes130_admission,All Features,11,1.0,"a1c_ordinal, change_flag, diabetesMed_flag, discharge_disposition_id, insulin_ordinal, max_glu_ordinal, num_lab_procedures, num_medications, num_procedures, number_diagnoses, time_in_hospital"
+diabetes130_admission,Availability Gate + SHAP,11,0.0,none
+diabetes130_admission,LightGBM Gain,11,0.36363636363636365,"discharge_disposition_id, num_lab_procedures, num_medications, time_in_hospital"
+diabetes130_admission,Mutual Information,11,0.29090909090909095,"change_flag, diabetesMed_flag, discharge_disposition_id, max_glu_ordinal, number_diagnoses, time_in_hospital"
+diabetes130_admission,Oracle Trap Exclusion + SHAP,11,0.0,none
+diabetes130_admission,PSEUL-Audit,11,0.2545454545454545,"a1c_ordinal, discharge_disposition_id, number_diagnoses, time_in_hospital"
+diabetes130_admission,PSEUL-Auto (leakage metadata null),11,0.0,none
+diabetes130_admission,PSEUL-Select,11,0.0,none
+diabetes130_admission,Permutation Importance,11,0.27272727272727276,"a1c_ordinal, diabetesMed_flag, discharge_disposition_id, num_lab_procedures, num_medications, time_in_hospital"
+diabetes130_admission,SHAP Ranking,11,0.2727272727272727,"diabetesMed_flag, discharge_disposition_id, num_lab_procedures, num_medications, time_in_hospital"
+diabetes130_admission,Semantic Veto + SHAP,11,0.0,none
+diabetes130_discharge,All Features,0,,none
+diabetes130_discharge,Availability Gate + SHAP,0,,none
+diabetes130_discharge,LightGBM Gain,0,,none
+diabetes130_discharge,Mutual Information,0,,none
+diabetes130_discharge,Oracle Trap Exclusion + SHAP,0,,none
+diabetes130_discharge,PSEUL-Audit,0,,none
+diabetes130_discharge,PSEUL-Auto (leakage metadata null),0,,none
+diabetes130_discharge,PSEUL-Select,0,,none
+diabetes130_discharge,Permutation Importance,0,,none
+diabetes130_discharge,SHAP Ranking,0,,none
+diabetes130_discharge,Semantic Veto + SHAP,0,,none

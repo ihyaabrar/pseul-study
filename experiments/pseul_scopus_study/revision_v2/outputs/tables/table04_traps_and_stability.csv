@@ -1,0 +1,21 @@
+study,method,n_designated_traps,mean_trap_selection_frequency,mean_pairwise_jaccard,min_pairwise_jaccard,traps_ever_selected
+adherence,All Features,2,1.0,1.0,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,Oracle Trap Exclusion + SHAP,2,0.0,1.0,1.0,none
+adherence,PSEUL-Auto (leakage metadata null),2,1.0,1.0,1.0,"ANNUALCLAIMAMOUNT, UNITSTOTAL"
+adherence,PSEUL-Select,2,0.5,1.0,1.0,ANNUALCLAIMAMOUNT
+nhanes,All Features,2,1.0,1.0,1.0,"fasting_glucose, hba1c"
+nhanes,Oracle Trap Exclusion + SHAP,2,0.0,0.782,0.6,none
+nhanes,PSEUL-Auto (leakage metadata null),2,1.0,0.84,0.6,"fasting_glucose, hba1c"
+nhanes,PSEUL-Select,2,0.0,0.751,0.6,none
+brfss,All Features,4,1.0,1.0,1.0,"diabetes_age, diabetes_age_observed, insulin_use, insulin_use_observed"
+brfss,Oracle Trap Exclusion + SHAP,4,0.0,1.0,1.0,none
+brfss,PSEUL-Auto (leakage metadata null),4,0.75,1.0,1.0,"diabetes_age, diabetes_age_observed, insulin_use"
+brfss,PSEUL-Select,4,0.0,1.0,1.0,none
+diabetes130_admission,All Features,11,1.0,1.0,1.0,"a1c_ordinal, change_flag, diabetesMed_flag, discharge_disposition_id, insulin_ordinal, max_glu_ordinal, num_lab_procedures, num_medications, num_procedures, number_diagnoses, time_in_hospital"
+diabetes130_admission,Oracle Trap Exclusion + SHAP,11,0.0,0.767,0.667,none
+diabetes130_admission,PSEUL-Auto (leakage metadata null),11,0.0,0.767,0.667,none
+diabetes130_admission,PSEUL-Select,11,0.0,0.767,0.667,none
+diabetes130_discharge,All Features,0,,1.0,1.0,none
+diabetes130_discharge,Oracle Trap Exclusion + SHAP,0,,1.0,1.0,none
+diabetes130_discharge,PSEUL-Auto (leakage metadata null),0,,0.8,0.667,none
+diabetes130_discharge,PSEUL-Select,0,,0.686,0.429,none

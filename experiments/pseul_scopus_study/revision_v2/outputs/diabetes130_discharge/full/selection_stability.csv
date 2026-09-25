@@ -1,0 +1,12 @@
+method,mean_pairwise_jaccard,min_pairwise_jaccard,n_outer_folds
+All Features,1.0,1.0,5
+Availability Gate + SHAP,1.0,1.0,5
+LightGBM Gain,0.8,0.6666666666666666,5
+Mutual Information,0.4619047619047619,0.25,5
+Oracle Trap Exclusion + SHAP,1.0,1.0,5
+PSEUL-Audit,0.7333333333333333,0.6666666666666666,5
+PSEUL-Auto (leakage metadata null),0.8,0.6666666666666666,5
+PSEUL-Select,0.6857142857142857,0.42857142857142855,5
+Permutation Importance,0.6952380952380952,0.42857142857142855,5
+SHAP Ranking,1.0,1.0,5
+Semantic Veto + SHAP,1.0,1.0,5

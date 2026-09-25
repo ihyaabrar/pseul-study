@@ -1,0 +1,12 @@
+Method,Role,Definition
+All Features,Unfiltered comparator,No availability or trap control
+Mutual Information,Training-only filter ranking,Top-k marginal mutual information
+LightGBM Gain,Training-only embedded ranking,Top-k split gain
+Permutation Importance,Training-only wrapper ranking,Internal selector split; top-k AUC drop
+SHAP Ranking,Training-only explanation ranking,Top-k mean absolute TreeSHAP
+PSEUL-Audit,Diagnostic output,Ranks value without deployment leakage gate
+Availability Gate + SHAP,Availability ablation,Top-k SHAP after the hard prediction-time gate
+Semantic Veto + SHAP,Gate-plus-veto ablation,Top-k SHAP after availability and semantic-veto gates
+PSEUL-Select,Primary leakage-aware selector,Availability and semantic vetoes + soft leakage penalty + score floor
+PSEUL-Auto,Leakage-metadata-null control,Same seed/folds and non-leakage metadata; only leakage metadata is nulled
+Oracle exclusion + SHAP,Registry-informed ceiling,Pre-excludes known traps; not autonomous

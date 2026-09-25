@@ -1,0 +1,12 @@
+method,features,n_features,avg_leakage_risk,avg_clinical_utility,designated_traps_selected,designated_trap_fraction,prediction_unavailable_selected
+All Features,"[""age"", ""sex_male"", ""race_ethnicity"", ""education"", ""income_ratio"", ""bmi"", ""waist"", ""weight"", ""systolic_bp"", ""diastolic_bp"", ""total_cholesterol"", ""hdl_cholesterol"", ""sedentary_minutes"", ""ever_smoked"", ""prediabetes_told"", ""hba1c"", ""fasting_glucose""]",17,0.18192607744938472,0.7009803921568628,2,1.0,0
+Mutual Information,"[""hba1c"", ""fasting_glucose"", ""age"", ""waist"", ""total_cholesterol"", ""hdl_cholesterol"", ""systolic_bp"", ""education""]",8,0.2989517732228234,0.71875,2,1.0,0
+LightGBM Gain,"[""age"", ""income_ratio"", ""total_cholesterol"", ""sedentary_minutes"", ""hba1c"", ""diastolic_bp"", ""waist"", ""weight""]",8,0.18568579193016155,0.7208333333333333,1,0.5,0
+Permutation Importance,"[""hba1c"", ""fasting_glucose"", ""age"", ""prediabetes_told"", ""total_cholesterol"", ""waist"", ""weight"", ""systolic_bp""]",8,0.32443692277663644,0.7666666666666667,2,1.0,0
+SHAP Ranking,"[""hba1c"", ""age"", ""fasting_glucose"", ""prediabetes_told"", ""total_cholesterol"", ""waist"", ""bmi"", ""diastolic_bp""]",8,0.32269037620430163,0.775,2,1.0,0
+Availability Gate + SHAP,"[""hba1c"", ""age"", ""fasting_glucose"", ""prediabetes_told"", ""total_cholesterol"", ""waist"", ""bmi"", ""diastolic_bp""]",8,0.32269037620430163,0.775,2,1.0,0
+Semantic Veto + SHAP,"[""age"", ""prediabetes_told"", ""total_cholesterol"", ""waist"", ""bmi"", ""diastolic_bp"", ""hdl_cholesterol"", ""sedentary_minutes""]",8,0.11399879048039083,0.7395833333333333,0,0.0,0
+PSEUL-Select,"[""age"", ""bmi"", ""prediabetes_told"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp"", ""waist"", ""race_ethnicity""]",8,0.10281737046049466,0.7291666666666667,0,0.0,0
+PSEUL-Audit,"[""hba1c"", ""fasting_glucose"", ""prediabetes_told"", ""age"", ""bmi"", ""waist"", ""sedentary_minutes"", ""diastolic_bp""]",8,0.3149316177033053,0.7833333333333334,2,1.0,0
+PSEUL-Auto (leakage metadata null),"[""hba1c"", ""fasting_glucose"", ""prediabetes_told"", ""age"", ""bmi"", ""sedentary_minutes"", ""total_cholesterol"", ""diastolic_bp""]",8,0.3101001005307543,0.7625000000000001,2,1.0,0
+Oracle Trap Exclusion + SHAP,"[""age"", ""waist"", ""total_cholesterol"", ""bmi"", ""prediabetes_told"", ""systolic_bp"", ""race_ethnicity"", ""hdl_cholesterol""]",8,0.11679055625519252,0.7270833333333333,0,0.0,0

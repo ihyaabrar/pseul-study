@@ -1,0 +1,11 @@
+study,method,selected_features,designated_traps_selected,prediction_unavailable_selected
+adherence,PSEUL-Select,"DIAGNOSIS_HYPERTENSION, COMPLICATIONDEVELOPMENT_NO_COMPLICATION, COMORBIDITY_NO_COMORBIDITY, AGE, ANNUALCLAIMAMOUNT",1,0
+adherence,PSEUL-Auto (leakage metadata null),"UNITSTOTAL, DIAGNOSIS_HYPERTENSION, COMPLICATIONDEVELOPMENT_NO_COMPLICATION, COMORBIDITY_NO_COMORBIDITY, AGE",1,0
+nhanes,PSEUL-Select,"age, bmi, prediabetes_told, sedentary_minutes, total_cholesterol, diastolic_bp, waist, race_ethnicity",0,0
+nhanes,PSEUL-Auto (leakage metadata null),"hba1c, fasting_glucose, prediabetes_told, age, bmi, sedentary_minutes, total_cholesterol, diastolic_bp",2,0
+brfss,PSEUL-Select,"bmi, age, hypertension, exercise_any, high_cholesterol, general_health, kidney_disease, heart_attack",0,0
+brfss,PSEUL-Auto (leakage metadata null),"diabetes_age_observed, diabetes_age, bmi, age, hypertension, insulin_use, high_cholesterol, general_health",3,0
+diabetes130_admission,PSEUL-Select,"age_ordinal, number_inpatient, number_emergency, admission_type_id, number_outpatient",0,0
+diabetes130_admission,PSEUL-Auto (leakage metadata null),"number_inpatient, age_ordinal, number_emergency, admission_type_id, number_outpatient",0,0
+diabetes130_discharge,PSEUL-Select,"discharge_disposition_id, a1c_ordinal, age_ordinal, num_medications, number_inpatient",0,0
+diabetes130_discharge,PSEUL-Auto (leakage metadata null),"discharge_disposition_id, number_inpatient, a1c_ordinal, num_medications, age_ordinal",0,0

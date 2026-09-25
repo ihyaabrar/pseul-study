@@ -1,0 +1,31 @@
+study,metric,comparator,delta_reference_minus_comparator,ci_low,ci_high,holm_adjusted_p,inference_method
+adherence,auc,All Features,-0.064,-0.069,-0.06,0.0,paired DeLong
+adherence,mcc,All Features,-0.132,-0.143,-0.121,0.01,paired stratified multinomial bootstrap
+adherence,auc,Oracle Trap Exclusion + SHAP,0.182,0.174,0.19,0.0,paired DeLong
+adherence,mcc,Oracle Trap Exclusion + SHAP,0.314,0.298,0.331,0.01,paired stratified multinomial bootstrap
+adherence,auc,PSEUL-Auto (leakage metadata null),-0.064,-0.068,-0.06,0.0,paired DeLong
+adherence,mcc,PSEUL-Auto (leakage metadata null),-0.134,-0.146,-0.123,0.01,paired stratified multinomial bootstrap
+nhanes,auc,All Features,-0.155,-0.169,-0.14,0.0,paired DeLong
+nhanes,mcc,All Features,-0.459,-0.494,-0.424,0.01,paired stratified multinomial bootstrap
+nhanes,auc,Oracle Trap Exclusion + SHAP,0.0,-0.008,0.008,0.973,paired DeLong
+nhanes,mcc,Oracle Trap Exclusion + SHAP,0.032,0.006,0.06,0.04,paired stratified multinomial bootstrap
+nhanes,auc,PSEUL-Auto (leakage metadata null),-0.154,-0.168,-0.14,0.0,paired DeLong
+nhanes,mcc,PSEUL-Auto (leakage metadata null),-0.463,-0.501,-0.428,0.01,paired stratified multinomial bootstrap
+brfss,auc,All Features,-0.207,-0.213,-0.202,0.0,paired DeLong
+brfss,mcc,All Features,-0.79,-0.805,-0.775,0.01,paired stratified multinomial bootstrap
+brfss,auc,Oracle Trap Exclusion + SHAP,-0.01,-0.012,-0.008,0.0,paired DeLong
+brfss,mcc,Oracle Trap Exclusion + SHAP,-0.002,-0.011,0.005,0.567,paired stratified multinomial bootstrap
+brfss,auc,PSEUL-Auto (leakage metadata null),-0.207,-0.213,-0.202,0.0,paired DeLong
+brfss,mcc,PSEUL-Auto (leakage metadata null),-0.789,-0.805,-0.776,0.01,paired stratified multinomial bootstrap
+diabetes130_admission,auc,All Features,-0.064,-0.076,-0.052,0.0,paired DeLong
+diabetes130_admission,mcc,All Features,0.006,-0.017,0.029,1.0,paired stratified multinomial bootstrap
+diabetes130_admission,auc,Oracle Trap Exclusion + SHAP,0.006,-0.002,0.014,0.245,paired DeLong
+diabetes130_admission,mcc,Oracle Trap Exclusion + SHAP,0.011,-0.003,0.026,1.0,paired stratified multinomial bootstrap
+diabetes130_admission,auc,PSEUL-Auto (leakage metadata null),0.0,0.0,0.0,1.0,paired DeLong
+diabetes130_admission,mcc,PSEUL-Auto (leakage metadata null),0.0,0.0,0.0,1.0,paired stratified multinomial bootstrap
+diabetes130_discharge,auc,All Features,-0.023,-0.031,-0.014,0.0,paired DeLong
+diabetes130_discharge,mcc,All Features,-0.02,-0.039,0.0,0.486,paired stratified multinomial bootstrap
+diabetes130_discharge,auc,Oracle Trap Exclusion + SHAP,-0.009,-0.017,-0.0,0.315,paired DeLong
+diabetes130_discharge,mcc,Oracle Trap Exclusion + SHAP,-0.011,-0.033,0.012,1.0,paired stratified multinomial bootstrap
+diabetes130_discharge,auc,PSEUL-Auto (leakage metadata null),-0.004,-0.007,-0.0,0.214,paired DeLong
+diabetes130_discharge,mcc,PSEUL-Auto (leakage metadata null),-0.009,-0.02,-0.001,0.32,paired stratified multinomial bootstrap

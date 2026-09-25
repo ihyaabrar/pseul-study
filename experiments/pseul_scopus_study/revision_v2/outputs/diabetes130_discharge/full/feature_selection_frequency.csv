@@ -1,0 +1,82 @@
+method,feature,selection_frequency,canonical_trap
+All Features,a1c_ordinal,1.0,False
+All Features,admission_source_id,1.0,False
+All Features,admission_type_id,1.0,False
+All Features,age_ordinal,1.0,False
+All Features,change_flag,1.0,False
+All Features,diabetesMed_flag,1.0,False
+All Features,discharge_disposition_id,1.0,False
+All Features,gender_male,1.0,False
+All Features,insulin_ordinal,1.0,False
+All Features,max_glu_ordinal,1.0,False
+All Features,num_lab_procedures,1.0,False
+All Features,num_medications,1.0,False
+All Features,num_procedures,1.0,False
+All Features,number_diagnoses,1.0,False
+All Features,number_emergency,1.0,False
+All Features,number_inpatient,1.0,False
+All Features,number_outpatient,1.0,False
+All Features,time_in_hospital,1.0,False
+Availability Gate + SHAP,age_ordinal,1.0,False
+Availability Gate + SHAP,discharge_disposition_id,1.0,False
+Availability Gate + SHAP,num_lab_procedures,1.0,False
+Availability Gate + SHAP,number_inpatient,1.0,False
+Availability Gate + SHAP,time_in_hospital,1.0,False
+LightGBM Gain,age_ordinal,0.6,False
+LightGBM Gain,discharge_disposition_id,1.0,False
+LightGBM Gain,num_lab_procedures,1.0,False
+LightGBM Gain,num_medications,1.0,False
+LightGBM Gain,number_diagnoses,0.4,False
+LightGBM Gain,time_in_hospital,1.0,False
+Mutual Information,a1c_ordinal,0.2,False
+Mutual Information,admission_source_id,0.4,False
+Mutual Information,age_ordinal,0.2,False
+Mutual Information,diabetesMed_flag,0.8,False
+Mutual Information,discharge_disposition_id,1.0,False
+Mutual Information,gender_male,0.6,False
+Mutual Information,insulin_ordinal,0.2,False
+Mutual Information,num_medications,0.2,False
+Mutual Information,number_diagnoses,0.2,False
+Mutual Information,number_inpatient,1.0,False
+Mutual Information,time_in_hospital,0.2,False
+Oracle Trap Exclusion + SHAP,age_ordinal,1.0,False
+Oracle Trap Exclusion + SHAP,discharge_disposition_id,1.0,False
+Oracle Trap Exclusion + SHAP,num_lab_procedures,1.0,False
+Oracle Trap Exclusion + SHAP,number_inpatient,1.0,False
+Oracle Trap Exclusion + SHAP,time_in_hospital,1.0,False
+PSEUL-Audit,a1c_ordinal,0.6,False
+PSEUL-Audit,age_ordinal,1.0,False
+PSEUL-Audit,discharge_disposition_id,1.0,False
+PSEUL-Audit,num_medications,0.6,False
+PSEUL-Audit,number_inpatient,1.0,False
+PSEUL-Audit,time_in_hospital,0.8,False
+PSEUL-Auto (leakage metadata null),a1c_ordinal,1.0,False
+PSEUL-Auto (leakage metadata null),age_ordinal,1.0,False
+PSEUL-Auto (leakage metadata null),discharge_disposition_id,1.0,False
+PSEUL-Auto (leakage metadata null),num_medications,0.6,False
+PSEUL-Auto (leakage metadata null),number_inpatient,1.0,False
+PSEUL-Auto (leakage metadata null),time_in_hospital,0.4,False
+PSEUL-Select,a1c_ordinal,1.0,False
+PSEUL-Select,age_ordinal,1.0,False
+PSEUL-Select,discharge_disposition_id,1.0,False
+PSEUL-Select,max_glu_ordinal,0.2,False
+PSEUL-Select,num_medications,0.6,False
+PSEUL-Select,number_inpatient,0.8,False
+PSEUL-Select,time_in_hospital,0.4,False
+Permutation Importance,age_ordinal,0.8,False
+Permutation Importance,discharge_disposition_id,1.0,False
+Permutation Importance,num_lab_procedures,0.4,False
+Permutation Importance,num_medications,0.6,False
+Permutation Importance,num_procedures,0.2,False
+Permutation Importance,number_inpatient,1.0,False
+Permutation Importance,time_in_hospital,1.0,False
+SHAP Ranking,age_ordinal,1.0,False
+SHAP Ranking,discharge_disposition_id,1.0,False
+SHAP Ranking,num_lab_procedures,1.0,False
+SHAP Ranking,number_inpatient,1.0,False
+SHAP Ranking,time_in_hospital,1.0,False
+Semantic Veto + SHAP,age_ordinal,1.0,False
+Semantic Veto + SHAP,discharge_disposition_id,1.0,False
+Semantic Veto + SHAP,num_lab_procedures,1.0,False
+Semantic Veto + SHAP,number_inpatient,1.0,False
+Semantic Veto + SHAP,time_in_hospital,1.0,False

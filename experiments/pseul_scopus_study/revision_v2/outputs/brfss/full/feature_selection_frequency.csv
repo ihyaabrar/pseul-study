@@ -1,0 +1,107 @@
+method,feature,selection_frequency,canonical_trap
+All Features,age,1.0,False
+All Features,bmi,1.0,False
+All Features,checkup_recent,1.0,False
+All Features,current_smoker,1.0,False
+All Features,diabetes_age,1.0,True
+All Features,diabetes_age_observed,1.0,True
+All Features,exercise_any,1.0,False
+All Features,general_health,1.0,False
+All Features,heart_attack,1.0,False
+All Features,heart_disease,1.0,False
+All Features,high_cholesterol,1.0,False
+All Features,hypertension,1.0,False
+All Features,insulin_use,1.0,True
+All Features,insulin_use_observed,1.0,True
+All Features,kidney_disease,1.0,False
+All Features,mental_health_days,1.0,False
+All Features,physical_health_days,1.0,False
+All Features,sex_male,1.0,False
+Availability Gate + SHAP,age,1.0,False
+Availability Gate + SHAP,bmi,1.0,False
+Availability Gate + SHAP,checkup_recent,1.0,False
+Availability Gate + SHAP,diabetes_age,1.0,True
+Availability Gate + SHAP,diabetes_age_observed,1.0,True
+Availability Gate + SHAP,general_health,1.0,False
+Availability Gate + SHAP,insulin_use_observed,1.0,True
+Availability Gate + SHAP,physical_health_days,1.0,False
+LightGBM Gain,age,1.0,False
+LightGBM Gain,bmi,1.0,False
+LightGBM Gain,checkup_recent,0.4,False
+LightGBM Gain,diabetes_age,1.0,True
+LightGBM Gain,exercise_any,0.2,False
+LightGBM Gain,general_health,1.0,False
+LightGBM Gain,insulin_use_observed,0.8,True
+LightGBM Gain,kidney_disease,1.0,False
+LightGBM Gain,mental_health_days,0.4,False
+LightGBM Gain,physical_health_days,1.0,False
+LightGBM Gain,sex_male,0.2,False
+Mutual Information,age,1.0,False
+Mutual Information,bmi,0.4,False
+Mutual Information,checkup_recent,0.8,False
+Mutual Information,diabetes_age,1.0,True
+Mutual Information,diabetes_age_observed,1.0,True
+Mutual Information,exercise_any,0.8,False
+Mutual Information,general_health,1.0,False
+Mutual Information,insulin_use,1.0,True
+Mutual Information,insulin_use_observed,1.0,True
+Oracle Trap Exclusion + SHAP,age,1.0,False
+Oracle Trap Exclusion + SHAP,bmi,1.0,False
+Oracle Trap Exclusion + SHAP,checkup_recent,1.0,False
+Oracle Trap Exclusion + SHAP,exercise_any,1.0,False
+Oracle Trap Exclusion + SHAP,general_health,1.0,False
+Oracle Trap Exclusion + SHAP,heart_attack,1.0,False
+Oracle Trap Exclusion + SHAP,kidney_disease,1.0,False
+Oracle Trap Exclusion + SHAP,sex_male,1.0,False
+PSEUL-Audit,age,1.0,False
+PSEUL-Audit,bmi,1.0,False
+PSEUL-Audit,diabetes_age,1.0,True
+PSEUL-Audit,diabetes_age_observed,1.0,True
+PSEUL-Audit,exercise_any,1.0,False
+PSEUL-Audit,hypertension,1.0,False
+PSEUL-Audit,insulin_use,1.0,True
+PSEUL-Audit,insulin_use_observed,1.0,True
+PSEUL-Auto (leakage metadata null),age,1.0,False
+PSEUL-Auto (leakage metadata null),bmi,1.0,False
+PSEUL-Auto (leakage metadata null),diabetes_age,1.0,True
+PSEUL-Auto (leakage metadata null),diabetes_age_observed,1.0,True
+PSEUL-Auto (leakage metadata null),exercise_any,1.0,False
+PSEUL-Auto (leakage metadata null),high_cholesterol,1.0,False
+PSEUL-Auto (leakage metadata null),hypertension,1.0,False
+PSEUL-Auto (leakage metadata null),insulin_use,1.0,True
+PSEUL-Select,age,1.0,False
+PSEUL-Select,bmi,1.0,False
+PSEUL-Select,exercise_any,1.0,False
+PSEUL-Select,general_health,1.0,False
+PSEUL-Select,heart_attack,1.0,False
+PSEUL-Select,high_cholesterol,1.0,False
+PSEUL-Select,hypertension,1.0,False
+PSEUL-Select,kidney_disease,1.0,False
+Permutation Importance,checkup_recent,0.6,False
+Permutation Importance,current_smoker,1.0,False
+Permutation Importance,diabetes_age,1.0,True
+Permutation Importance,diabetes_age_observed,1.0,True
+Permutation Importance,heart_attack,0.6,False
+Permutation Importance,heart_disease,0.4,False
+Permutation Importance,insulin_use,1.0,True
+Permutation Importance,insulin_use_observed,1.0,True
+Permutation Importance,kidney_disease,0.8,False
+Permutation Importance,sex_male,0.6,False
+SHAP Ranking,age,1.0,False
+SHAP Ranking,bmi,1.0,False
+SHAP Ranking,checkup_recent,1.0,False
+SHAP Ranking,diabetes_age,1.0,True
+SHAP Ranking,diabetes_age_observed,1.0,True
+SHAP Ranking,general_health,1.0,False
+SHAP Ranking,insulin_use_observed,1.0,True
+SHAP Ranking,physical_health_days,1.0,False
+Semantic Veto + SHAP,age,1.0,False
+Semantic Veto + SHAP,bmi,1.0,False
+Semantic Veto + SHAP,checkup_recent,1.0,False
+Semantic Veto + SHAP,exercise_any,0.4,False
+Semantic Veto + SHAP,general_health,1.0,False
+Semantic Veto + SHAP,heart_attack,0.2,False
+Semantic Veto + SHAP,kidney_disease,1.0,False
+Semantic Veto + SHAP,mental_health_days,0.4,False
+Semantic Veto + SHAP,physical_health_days,1.0,False
+Semantic Veto + SHAP,sex_male,1.0,False

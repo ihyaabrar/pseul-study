@@ -1,0 +1,195 @@
+{
+  "study": "diabetes130_discharge",
+  "run_label": "full",
+  "spec": {
+    "key": "diabetes130_discharge",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Discharge-time 30-day readmission risk prediction",
+    "intended_use": "Prioritize post-discharge follow-up using information available by discharge",
+    "prediction_landmark": "Immediately before discharge",
+    "observation_window": "History plus index-encounter data available by discharge",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First eligible encounter per patient, excluding death/hospice dispositions",
+    "top_k": 5,
+    "canonical_traps": [],
+    "leakage_mechanism": "Negative-control scenario: no designated temporal trap after eligibility filtering",
+    "evidence_status": "Retrospective internal evaluation; external/temporal validation absent",
+    "interpretation": "Tests whether PSEUL avoids inventing leakage when features are landmark-valid."
+  },
+  "metadata": {
+    "source_file": "D:\\Tesis\\Jurnal 2\\paper5\\data\\diabetes130\\diabetic_data.csv",
+    "raw_rows": 101766,
+    "unique_patient_rows": 69973,
+    "death_hospice_rows_before_filter": 1545,
+    "death_hospice_excluded": true,
+    "death_hospice_dispositions": [
+      11,
+      13,
+      14,
+      19,
+      20,
+      21
+    ],
+    "key": "diabetes130_discharge",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Discharge-time 30-day readmission risk prediction",
+    "intended_use": "Prioritize post-discharge follow-up using information available by discharge",
+    "prediction_landmark": "Immediately before discharge",
+    "observation_window": "History plus index-encounter data available by discharge",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First eligible encounter per patient, excluding death/hospice dispositions",
+    "top_k": 5,
+    "canonical_traps": [],
+    "leakage_mechanism": "Negative-control scenario: no designated temporal trap after eligibility filtering",
+    "evidence_status": "Retrospective internal evaluation; external/temporal validation absent",
+    "interpretation": "Tests whether PSEUL avoids inventing leakage when features are landmark-valid.",
+    "rows": 69973,
+    "features": 18,
+    "positive_rate": 0.08970602946850928,
+    "missing_cells": 0,
+    "analysis_subsample": 40000
+  },
+  "outer_splits": 5,
+  "inner_splits": 3,
+  "test_size": 0.2,
+  "test_evaluated": true,
+  "include_proxy_baselines": false,
+  "include_auto_ablation": true,
+  "random_state": 42,
+  "development_rows": 32000,
+  "test_rows": 8000,
+  "development_test_overlap": 0,
+  "fold_audits": [
+    {
+      "fold": 1,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "457ad9fcd795560d8e19c8236e55086e8b5d5d9e2cea4a84f8abf82a373a2c2a",
+      "outer_train_index_hash": "457ad9fcd795560d8e19c8236e55086e8b5d5d9e2cea4a84f8abf82a373a2c2a",
+      "outer_valid_index_hash": "f36650c8cfe00693cc9333df37047607ed3e8aacfd8dc8295720cd83d8148967",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "b6df99d2500d24c00b0b74c122fe4f52ace165c6e0715f0ab70471469808c333",
+      "outer_train_index_hash": "b6df99d2500d24c00b0b74c122fe4f52ace165c6e0715f0ab70471469808c333",
+      "outer_valid_index_hash": "0f929a568ff1183d82a0ae3ff7c05e10580466900db4129fbb1f4231581e5fac",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "c724d8ea0ac451fcd2947d8648ff3ff40317168d63f6e9317d5bc44c415f843b",
+      "outer_train_index_hash": "c724d8ea0ac451fcd2947d8648ff3ff40317168d63f6e9317d5bc44c415f843b",
+      "outer_valid_index_hash": "0fb4daef8ce56b6dbfb1c4287d4349879e82a80ec5dc948060bd3bf6eb811d44",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "42cd07a8e2bf5cb9c9e977381549484f308c6ed8a8d063c3246aaadd7580777c",
+      "outer_train_index_hash": "42cd07a8e2bf5cb9c9e977381549484f308c6ed8a8d063c3246aaadd7580777c",
+      "outer_valid_index_hash": "d521b84769cf6f49a3e0f84f5ab1395df114751e3cce25464be72fa72a1a902b",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "6993f45067fc35487bf72bfb3a05b5f97198835bdab4f46414885e5de5c03fd2",
+      "outer_train_index_hash": "6993f45067fc35487bf72bfb3a05b5f97198835bdab4f46414885e5de5c03fd2",
+      "outer_valid_index_hash": "c01d03d0d58a93c971c0d2184fb2a2734f885abf6e784ddbb800ec07bdb930d6",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 733.0251445770264
+}

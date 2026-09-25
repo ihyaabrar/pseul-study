@@ -1,0 +1,23 @@
+method,metric,estimate,ci_low,ci_high,bootstrap_replicates,inference_method
+All Features,auc,1.0,1.0,1.0,0,DeLong
+All Features,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+Availability Gate + SHAP,auc,1.0,1.0,1.0,0,DeLong
+Availability Gate + SHAP,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+LightGBM Gain,auc,0.9977784512688677,0.9971685658816204,0.9983883366561149,0,DeLong
+LightGBM Gain,mcc,0.9905121937660588,0.9885896660017237,0.9924328536203479,2000,stratified binomial bootstrap
+Mutual Information,auc,1.0,1.0,1.0,0,DeLong
+Mutual Information,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+Oracle Trap Exclusion + SHAP,auc,0.803059579851134,0.7975429378119533,0.8085762218903146,0,DeLong
+Oracle Trap Exclusion + SHAP,mcc,0.21275332644619732,0.19848964097160213,0.22733559060203076,2000,stratified binomial bootstrap
+PSEUL-Audit,auc,1.0,1.0,1.0,0,DeLong
+PSEUL-Audit,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+PSEUL-Auto (leakage metadata null),auc,1.0,1.0,1.0,0,DeLong
+PSEUL-Auto (leakage metadata null),mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+PSEUL-Select,auc,0.792647311757394,0.7869565074240227,0.7983381160907653,0,DeLong
+PSEUL-Select,mcc,0.21043642137775934,0.1957224697196814,0.22547752611654892,2000,stratified binomial bootstrap
+Permutation Importance,auc,1.0,1.0,1.0,0,DeLong
+Permutation Importance,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+SHAP Ranking,auc,1.0,1.0,1.0,0,DeLong
+SHAP Ranking,mcc,1.0,1.0,1.0,2000,stratified binomial bootstrap
+Semantic Veto + SHAP,auc,0.800778749838056,0.795237207782012,0.8063202918940999,0,DeLong
+Semantic Veto + SHAP,mcc,0.18526685340533963,0.1711766752223809,0.1997227730365229,2000,stratified binomial bootstrap

@@ -1,0 +1,194 @@
+{
+  "study": "brfss",
+  "run_label": "full",
+  "spec": {
+    "key": "brfss",
+    "dataset": "BRFSS 2024",
+    "task_type": "Cross-sectional structural-leakage stress test",
+    "intended_use": "Detect diabetes-contingent survey items and their skip-pattern indicators",
+    "prediction_landmark": "Survey interview",
+    "observation_window": "Contemporaneous BRFSS responses",
+    "prediction_horizon": "None (self-reported diabetes status)",
+    "eligible_population": "Respondents with valid DIABETE4 status in categories 1, 3, or 4",
+    "top_k": 8,
+    "canonical_traps": [
+      "insulin_use",
+      "diabetes_age",
+      "insulin_use_observed",
+      "diabetes_age_observed"
+    ],
+    "leakage_mechanism": "Post-diagnosis information and target-dependent questionnaire skip pattern",
+    "evidence_status": "Structural stress test; not a clinical-performance benchmark",
+    "interpretation": "AUC near 1.0 indicates structural leakage rather than model skill."
+  },
+  "metadata": {
+    "source_file": "D:\\Tesis\\Jurnal 2\\paper5\\data\\brfss_2024\\LLCP2024.XPT",
+    "cache": "D:\\Tesis\\Jurnal 2\\paper5\\experiments\\pseul_scopus_study\\revision_v2\\cache\\brfss_features_with_missingness.csv",
+    "key": "brfss",
+    "dataset": "BRFSS 2024",
+    "task_type": "Cross-sectional structural-leakage stress test",
+    "intended_use": "Detect diabetes-contingent survey items and their skip-pattern indicators",
+    "prediction_landmark": "Survey interview",
+    "observation_window": "Contemporaneous BRFSS responses",
+    "prediction_horizon": "None (self-reported diabetes status)",
+    "eligible_population": "Respondents with valid DIABETE4 status in categories 1, 3, or 4",
+    "top_k": 8,
+    "canonical_traps": [
+      "insulin_use",
+      "diabetes_age",
+      "insulin_use_observed",
+      "diabetes_age_observed"
+    ],
+    "leakage_mechanism": "Post-diagnosis information and target-dependent questionnaire skip pattern",
+    "evidence_status": "Structural stress test; not a clinical-performance benchmark",
+    "interpretation": "AUC near 1.0 indicates structural leakage rather than model skill.",
+    "rows": 453241,
+    "features": 18,
+    "positive_rate": 0.14519648487228648,
+    "missing_cells": 1845403,
+    "analysis_subsample": 50000
+  },
+  "outer_splits": 5,
+  "inner_splits": 3,
+  "test_size": 0.2,
+  "test_evaluated": true,
+  "include_proxy_baselines": false,
+  "include_auto_ablation": true,
+  "random_state": 42,
+  "development_rows": 40000,
+  "test_rows": 10000,
+  "development_test_overlap": 0,
+  "fold_audits": [
+    {
+      "fold": 1,
+      "imputer_fit_rows": 32000,
+      "imputer_fit_index_hash": "8bcdb1b7903ff7253cf2348189658a4e577a6840c26b75d7bfea4827018c6b18",
+      "outer_train_index_hash": "8bcdb1b7903ff7253cf2348189658a4e577a6840c26b75d7bfea4827018c6b18",
+      "outer_valid_index_hash": "1f78822ad888de6a25eea8cb3a57841c7d426a66868d68eb65f0a847b03d3b96",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "imputer_fit_rows": 32000,
+      "imputer_fit_index_hash": "1262bca5b74af28f8a1871d3ba5cf9b5e3fd656db281fecac3d6928e1559f43c",
+      "outer_train_index_hash": "1262bca5b74af28f8a1871d3ba5cf9b5e3fd656db281fecac3d6928e1559f43c",
+      "outer_valid_index_hash": "c856dfb400dc46e69351ac98c3c386ac57b4f5ac1599e4bc3c94c86aef2c5071",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "imputer_fit_rows": 32000,
+      "imputer_fit_index_hash": "b2c67d0d01ec1097c1674b8ca14714b5db0ef42fa1db04bd85bfffc7c2c3abd8",
+      "outer_train_index_hash": "b2c67d0d01ec1097c1674b8ca14714b5db0ef42fa1db04bd85bfffc7c2c3abd8",
+      "outer_valid_index_hash": "3dc7d9558dd2947a7aaf034439780f1f4deedf5891e6cafb836104b8302d035d",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "imputer_fit_rows": 32000,
+      "imputer_fit_index_hash": "a011d858af5627bd715b9f33094db046f0d52a4da7f45c7f9a128e919c25acef",
+      "outer_train_index_hash": "a011d858af5627bd715b9f33094db046f0d52a4da7f45c7f9a128e919c25acef",
+      "outer_valid_index_hash": "ebc2f169044df6c919d6bebfb67cfe0e5ac6198d3c184d01dd182eadc1a39be1",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "imputer_fit_rows": 32000,
+      "imputer_fit_index_hash": "f452dc8060f9996b357d0883bbd6da0b14a52cb638d2239bb3932a4c151a5407",
+      "outer_train_index_hash": "f452dc8060f9996b357d0883bbd6da0b14a52cb638d2239bb3932a4c151a5407",
+      "outer_valid_index_hash": "43acd9e30d6d5e02548776d02fa78c67c5ffd44f1a968a24fd8127247f602508",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 737.3040256500244
+}

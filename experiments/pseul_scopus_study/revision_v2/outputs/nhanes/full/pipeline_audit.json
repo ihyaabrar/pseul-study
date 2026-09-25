@@ -1,0 +1,188 @@
+{
+  "study": "nhanes",
+  "run_label": "full",
+  "spec": {
+    "key": "nhanes",
+    "dataset": "NHANES August 2021-August 2023",
+    "task_type": "Cross-sectional classification stress test",
+    "intended_use": "Detect variables used directly in the operational diabetes definition",
+    "prediction_landmark": "Survey/examination assessment",
+    "observation_window": "Contemporaneous interview, examination, and laboratory data",
+    "prediction_horizon": "None (cross-sectional diabetes status)",
+    "eligible_population": "Participants aged at least 20 with self-report or laboratory label evidence",
+    "top_k": 8,
+    "canonical_traps": [
+      "hba1c",
+      "fasting_glucose"
+    ],
+    "leakage_mechanism": "Definitional overlap",
+    "evidence_status": "Operationally defined from the target construction",
+    "interpretation": "A label-definition leakage stress test, not prospective diabetes prediction."
+  },
+  "metadata": {
+    "source_dir": "D:\\Tesis\\Jurnal 2\\paper5\\data\\nhanes_2021_2023",
+    "key": "nhanes",
+    "dataset": "NHANES August 2021-August 2023",
+    "task_type": "Cross-sectional classification stress test",
+    "intended_use": "Detect variables used directly in the operational diabetes definition",
+    "prediction_landmark": "Survey/examination assessment",
+    "observation_window": "Contemporaneous interview, examination, and laboratory data",
+    "prediction_horizon": "None (cross-sectional diabetes status)",
+    "eligible_population": "Participants aged at least 20 with self-report or laboratory label evidence",
+    "top_k": 8,
+    "canonical_traps": [
+      "hba1c",
+      "fasting_glucose"
+    ],
+    "leakage_mechanism": "Definitional overlap",
+    "evidence_status": "Operationally defined from the target construction",
+    "interpretation": "A label-definition leakage stress test, not prospective diabetes prediction.",
+    "rows": 7806,
+    "features": 17,
+    "positive_rate": 0.16692287983602358,
+    "missing_cells": 23558
+  },
+  "outer_splits": 5,
+  "inner_splits": 3,
+  "test_size": 0.2,
+  "test_evaluated": true,
+  "include_proxy_baselines": false,
+  "include_auto_ablation": true,
+  "random_state": 42,
+  "development_rows": 6244,
+  "test_rows": 1562,
+  "development_test_overlap": 0,
+  "fold_audits": [
+    {
+      "fold": 1,
+      "imputer_fit_rows": 4995,
+      "imputer_fit_index_hash": "4315fd2cba6b2c93dac25a12094fbcbdc7dfd40cb64e5f7a1ed669fcce310fec",
+      "outer_train_index_hash": "4315fd2cba6b2c93dac25a12094fbcbdc7dfd40cb64e5f7a1ed669fcce310fec",
+      "outer_valid_index_hash": "107975d0df8a1a9656a356eda95eab0c2d7f51640eebb1b80a9d400bca79b6cb",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "imputer_fit_rows": 4995,
+      "imputer_fit_index_hash": "da0ccc1baa7ed9e1328bf81bcb7881282d0dfd99a66ca315f495ed4321515005",
+      "outer_train_index_hash": "da0ccc1baa7ed9e1328bf81bcb7881282d0dfd99a66ca315f495ed4321515005",
+      "outer_valid_index_hash": "1dceb2e4f88d8f5f55d2df7f9a1bf135484be6e52621d92f3a29566b5d0f7640",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "imputer_fit_rows": 4995,
+      "imputer_fit_index_hash": "2df52e1c2d0c8852bb11591164ac46ef4f94a1f7a9b908503cfda55fbea4c5b1",
+      "outer_train_index_hash": "2df52e1c2d0c8852bb11591164ac46ef4f94a1f7a9b908503cfda55fbea4c5b1",
+      "outer_valid_index_hash": "3435c8b5418f85811c38328de6b1b735edfa4ec4cb1c6f03ad553d2af8834b5b",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "imputer_fit_rows": 4995,
+      "imputer_fit_index_hash": "ff80e78784e64e5108e3f6f766f7ca85fb1cea2f4c4c4ecb8554bb759f616509",
+      "outer_train_index_hash": "ff80e78784e64e5108e3f6f766f7ca85fb1cea2f4c4c4ecb8554bb759f616509",
+      "outer_valid_index_hash": "758e1e18bab9f7d232fdc654240c39428f13a1dd7b7a3ecf541b61ee1f3eeafd",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "imputer_fit_rows": 4996,
+      "imputer_fit_index_hash": "224c6d5fb26057292ebaceb242ccead66e4e6d26b42a08e390fbde1d28f08766",
+      "outer_train_index_hash": "224c6d5fb26057292ebaceb242ccead66e4e6d26b42a08e390fbde1d28f08766",
+      "outer_valid_index_hash": "5eeebc1e055268458e3367de1d8280c811118d1150857d89e4977734b81c1f57",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 322.25357460975647
+}

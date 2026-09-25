@@ -1,0 +1,100 @@
+[
+  {
+    "key": "adherence",
+    "dataset": "Medication adherence cohort",
+    "task_type": "Retrospective classification",
+    "intended_use": "Audit whether concurrent utilization proxies dominate adherence classification",
+    "prediction_landmark": "End of the recorded adherence assessment period",
+    "observation_window": "Same recorded period as the adherence label; no prospective window available",
+    "prediction_horizon": "None (retrospective classification)",
+    "eligible_population": "Deduplicated adults represented in the prepared cohort",
+    "top_k": 5,
+    "canonical_traps": [
+      "UNITSTOTAL",
+      "ANNUALCLAIMAMOUNT"
+    ],
+    "leakage_mechanism": "Concurrent outcome-window proxy",
+    "evidence_status": "Provisional until a temporal data dictionary is supplied",
+    "interpretation": "Not evidence of prospective early-warning performance."
+  },
+  {
+    "key": "nhanes",
+    "dataset": "NHANES August 2021-August 2023",
+    "task_type": "Cross-sectional classification stress test",
+    "intended_use": "Detect variables used directly in the operational diabetes definition",
+    "prediction_landmark": "Survey/examination assessment",
+    "observation_window": "Contemporaneous interview, examination, and laboratory data",
+    "prediction_horizon": "None (cross-sectional diabetes status)",
+    "eligible_population": "Participants aged at least 20 with self-report or laboratory label evidence",
+    "top_k": 8,
+    "canonical_traps": [
+      "hba1c",
+      "fasting_glucose"
+    ],
+    "leakage_mechanism": "Definitional overlap",
+    "evidence_status": "Operationally defined from the target construction",
+    "interpretation": "A label-definition leakage stress test, not prospective diabetes prediction."
+  },
+  {
+    "key": "brfss",
+    "dataset": "BRFSS 2024",
+    "task_type": "Cross-sectional structural-leakage stress test",
+    "intended_use": "Detect diabetes-contingent survey items and their skip-pattern indicators",
+    "prediction_landmark": "Survey interview",
+    "observation_window": "Contemporaneous BRFSS responses",
+    "prediction_horizon": "None (self-reported diabetes status)",
+    "eligible_population": "Respondents with valid DIABETE4 status in categories 1, 3, or 4",
+    "top_k": 8,
+    "canonical_traps": [
+      "insulin_use",
+      "diabetes_age",
+      "insulin_use_observed",
+      "diabetes_age_observed"
+    ],
+    "leakage_mechanism": "Post-diagnosis information and target-dependent questionnaire skip pattern",
+    "evidence_status": "Structural stress test; not a clinical-performance benchmark",
+    "interpretation": "AUC near 1.0 indicates structural leakage rather than model skill."
+  },
+  {
+    "key": "diabetes130_admission",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Admission-time 30-day readmission risk stress test",
+    "intended_use": "Identify patients for discharge-planning attention using information available at admission",
+    "prediction_landmark": "Hospital admission",
+    "observation_window": "History and administrative information available no later than admission",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First encounter per patient; death/hospice encounters are retained because discharge status is unknown at admission and are acknowledged as competing events",
+    "top_k": 5,
+    "canonical_traps": [
+      "time_in_hospital",
+      "num_lab_procedures",
+      "num_procedures",
+      "num_medications",
+      "number_diagnoses",
+      "discharge_disposition_id",
+      "a1c_ordinal",
+      "max_glu_ordinal",
+      "insulin_ordinal",
+      "change_flag",
+      "diabetesMed_flag"
+    ],
+    "leakage_mechanism": "Information recorded after the admission landmark",
+    "evidence_status": "Landmark-defined temporal availability stress test",
+    "interpretation": "Prior-year utilization counts remain valid admission-time predictors."
+  },
+  {
+    "key": "diabetes130_discharge",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Discharge-time 30-day readmission risk prediction",
+    "intended_use": "Prioritize post-discharge follow-up using information available by discharge",
+    "prediction_landmark": "Immediately before discharge",
+    "observation_window": "History plus index-encounter data available by discharge",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First eligible encounter per patient, excluding death/hospice dispositions",
+    "top_k": 5,
+    "canonical_traps": [],
+    "leakage_mechanism": "Negative-control scenario: no designated temporal trap after eligibility filtering",
+    "evidence_status": "Retrospective internal evaluation; external/temporal validation absent",
+    "interpretation": "Tests whether PSEUL avoids inventing leakage when features are landmark-valid."
+  }
+]

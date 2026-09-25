@@ -1,0 +1,8 @@
+{
+  "Fig. 1": "Leakage-resistant nested evaluation workflow. Five shared outer folds generate out-of-fold predictions; three inner folds estimate PSEUL signals within each outer-training partition. After the development analysis is frozen, the selector and classifier are refitted on the full development partition and evaluated once on the reserved internal test. Dashed rose arrows denote the isolated test hand-off.",
+  "Fig. 2": "PSEUL scoring and decision framework. Predictive utility, SHAP stability, evidence relevance, and author-rated utility form the additive audit score. Prediction-landmark availability and semantic veto provide separate hard controls; the leakage penalty and redundancy determine the selected subset, while the utility gate and score floor are defined but were inactive in every reported run. The dashed Auto branch reruns the same pipeline after setting LD, DO, and TP to zero while retaining all other inputs.",
+  "Fig. 3": "Pooled out-of-fold discrimination and designated-trap retention across five scenarios, with the staged two-gate baseline plotted alongside PSEUL-Select. PSEUL-Select removes every designated trap except the moderate-risk adherence proxy ANNUALCLAIMAMOUNT, which its supplied rating places below the veto threshold.",
+  "Fig. 4": "Selection stability across outer folds, measured by mean pairwise Jaccard similarity.",
+  "Fig. 5": "Performance-leakage trade-off in the two structural stress tests. Apparent discrimination approaches perfection when definitional or skip-pattern traps are retained.",
+  "Fig. 6": "Diabetes 130 landmark-specific scenario audit. Both scenarios use the same top-k ceiling, but eligibility differs; contrasts are descriptive and do not isolate a causal effect of changing the landmark."
+}

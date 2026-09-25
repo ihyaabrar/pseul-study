@@ -1,0 +1,71 @@
+method,feature,selection_frequency,canonical_trap
+All Features,AGE,1.0,False
+All Features,ANNUALCLAIMAMOUNT,1.0,True
+All Features,ANNUALCONTRIBUTION,1.0,False
+All Features,COMORBIDITY_NO_COMORBIDITY,1.0,False
+All Features,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+All Features,COVERTYPE_STANDARD,1.0,False
+All Features,DIAGNOSIS_HYPERTENSION,1.0,False
+All Features,GENDER_M,1.0,False
+All Features,SCHEMETYPE_MEDIUM,1.0,False
+All Features,SCHEMETYPE_PREMIUM,1.0,False
+All Features,UNITSTOTAL,1.0,True
+Availability Gate + SHAP,AGE,1.0,False
+Availability Gate + SHAP,ANNUALCLAIMAMOUNT,1.0,True
+Availability Gate + SHAP,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+Availability Gate + SHAP,DIAGNOSIS_HYPERTENSION,0.8,False
+Availability Gate + SHAP,GENDER_M,0.2,False
+Availability Gate + SHAP,UNITSTOTAL,1.0,True
+LightGBM Gain,AGE,1.0,False
+LightGBM Gain,ANNUALCLAIMAMOUNT,1.0,True
+LightGBM Gain,ANNUALCONTRIBUTION,1.0,False
+LightGBM Gain,DIAGNOSIS_HYPERTENSION,1.0,False
+LightGBM Gain,UNITSTOTAL,1.0,True
+Mutual Information,AGE,1.0,False
+Mutual Information,ANNUALCLAIMAMOUNT,1.0,True
+Mutual Information,ANNUALCONTRIBUTION,0.2,False
+Mutual Information,COMORBIDITY_NO_COMORBIDITY,0.8,False
+Mutual Information,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,0.2,False
+Mutual Information,COVERTYPE_STANDARD,0.2,False
+Mutual Information,DIAGNOSIS_HYPERTENSION,0.2,False
+Mutual Information,GENDER_M,0.2,False
+Mutual Information,SCHEMETYPE_PREMIUM,0.2,False
+Mutual Information,UNITSTOTAL,1.0,True
+Oracle Trap Exclusion + SHAP,AGE,1.0,False
+Oracle Trap Exclusion + SHAP,ANNUALCONTRIBUTION,1.0,False
+Oracle Trap Exclusion + SHAP,COMORBIDITY_NO_COMORBIDITY,1.0,False
+Oracle Trap Exclusion + SHAP,DIAGNOSIS_HYPERTENSION,1.0,False
+Oracle Trap Exclusion + SHAP,GENDER_M,1.0,False
+PSEUL-Audit,AGE,1.0,False
+PSEUL-Audit,ANNUALCLAIMAMOUNT,1.0,True
+PSEUL-Audit,COMORBIDITY_NO_COMORBIDITY,0.2,False
+PSEUL-Audit,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+PSEUL-Audit,DIAGNOSIS_HYPERTENSION,0.8,False
+PSEUL-Audit,UNITSTOTAL,1.0,True
+PSEUL-Auto (leakage metadata null),AGE,1.0,False
+PSEUL-Auto (leakage metadata null),ANNUALCLAIMAMOUNT,1.0,True
+PSEUL-Auto (leakage metadata null),COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+PSEUL-Auto (leakage metadata null),DIAGNOSIS_HYPERTENSION,1.0,False
+PSEUL-Auto (leakage metadata null),UNITSTOTAL,1.0,True
+PSEUL-Select,AGE,1.0,False
+PSEUL-Select,ANNUALCLAIMAMOUNT,1.0,True
+PSEUL-Select,COMORBIDITY_NO_COMORBIDITY,1.0,False
+PSEUL-Select,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+PSEUL-Select,DIAGNOSIS_HYPERTENSION,1.0,False
+Permutation Importance,AGE,1.0,False
+Permutation Importance,ANNUALCLAIMAMOUNT,1.0,True
+Permutation Importance,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+Permutation Importance,DIAGNOSIS_HYPERTENSION,1.0,False
+Permutation Importance,UNITSTOTAL,1.0,True
+SHAP Ranking,AGE,1.0,False
+SHAP Ranking,ANNUALCLAIMAMOUNT,1.0,True
+SHAP Ranking,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+SHAP Ranking,DIAGNOSIS_HYPERTENSION,0.8,False
+SHAP Ranking,GENDER_M,0.2,False
+SHAP Ranking,UNITSTOTAL,1.0,True
+Semantic Veto + SHAP,AGE,1.0,False
+Semantic Veto + SHAP,ANNUALCLAIMAMOUNT,1.0,True
+Semantic Veto + SHAP,ANNUALCONTRIBUTION,0.6,False
+Semantic Veto + SHAP,COMPLICATIONDEVELOPMENT_NO_COMPLICATION,1.0,False
+Semantic Veto + SHAP,DIAGNOSIS_HYPERTENSION,1.0,False
+Semantic Veto + SHAP,GENDER_M,0.4,False

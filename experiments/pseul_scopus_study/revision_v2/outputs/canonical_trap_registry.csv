@@ -1,0 +1,21 @@
+study,feature,mechanism,landmark,status
+adherence,UNITSTOTAL,Concurrent outcome-window proxy,End of the recorded adherence assessment period,Provisional until a temporal data dictionary is supplied
+adherence,ANNUALCLAIMAMOUNT,Concurrent outcome-window proxy,End of the recorded adherence assessment period,Provisional until a temporal data dictionary is supplied
+nhanes,hba1c,Definitional overlap,Survey/examination assessment,Operationally defined from the target construction
+nhanes,fasting_glucose,Definitional overlap,Survey/examination assessment,Operationally defined from the target construction
+brfss,insulin_use,Post-diagnosis information and target-dependent questionnaire skip pattern,Survey interview,Structural stress test; not a clinical-performance benchmark
+brfss,diabetes_age,Post-diagnosis information and target-dependent questionnaire skip pattern,Survey interview,Structural stress test; not a clinical-performance benchmark
+brfss,insulin_use_observed,Post-diagnosis information and target-dependent questionnaire skip pattern,Survey interview,Structural stress test; not a clinical-performance benchmark
+brfss,diabetes_age_observed,Post-diagnosis information and target-dependent questionnaire skip pattern,Survey interview,Structural stress test; not a clinical-performance benchmark
+diabetes130_admission,time_in_hospital,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,num_lab_procedures,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,num_procedures,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,num_medications,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,number_diagnoses,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,discharge_disposition_id,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,a1c_ordinal,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,max_glu_ordinal,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,insulin_ordinal,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,change_flag,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_admission,diabetesMed_flag,Information recorded after the admission landmark,Hospital admission,Landmark-defined temporal availability stress test
+diabetes130_discharge,[none designated],Negative-control scenario: no designated temporal trap after eligibility filtering,Immediately before discharge,Retrospective internal evaluation; external/temporal validation absent

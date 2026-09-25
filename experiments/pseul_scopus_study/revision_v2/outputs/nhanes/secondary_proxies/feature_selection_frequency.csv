@@ -1,0 +1,119 @@
+method,feature,selection_frequency,canonical_trap
+All Features,age,1.0,False
+All Features,bmi,1.0,False
+All Features,diastolic_bp,1.0,False
+All Features,education,1.0,False
+All Features,ever_smoked,1.0,False
+All Features,fasting_glucose,1.0,True
+All Features,hba1c,1.0,True
+All Features,hdl_cholesterol,1.0,False
+All Features,income_ratio,1.0,False
+All Features,prediabetes_told,1.0,False
+All Features,race_ethnicity,1.0,False
+All Features,sedentary_minutes,1.0,False
+All Features,sex_male,1.0,False
+All Features,systolic_bp,1.0,False
+All Features,total_cholesterol,1.0,False
+All Features,waist,1.0,False
+All Features,weight,1.0,False
+GRASP-inspired Proxy,age,1.0,False
+GRASP-inspired Proxy,fasting_glucose,1.0,True
+GRASP-inspired Proxy,hba1c,1.0,True
+GRASP-inspired Proxy,income_ratio,1.0,False
+GRASP-inspired Proxy,prediabetes_told,0.8,False
+GRASP-inspired Proxy,sedentary_minutes,0.8,False
+GRASP-inspired Proxy,systolic_bp,0.4,False
+GRASP-inspired Proxy,total_cholesterol,1.0,False
+GRASP-inspired Proxy,waist,1.0,False
+LightGBM Gain,age,1.0,False
+LightGBM Gain,bmi,0.2,False
+LightGBM Gain,diastolic_bp,1.0,False
+LightGBM Gain,fasting_glucose,0.2,True
+LightGBM Gain,hba1c,1.0,True
+LightGBM Gain,income_ratio,1.0,False
+LightGBM Gain,sedentary_minutes,1.0,False
+LightGBM Gain,systolic_bp,0.6,False
+LightGBM Gain,total_cholesterol,1.0,False
+LightGBM Gain,waist,1.0,False
+Mutual Information,age,1.0,False
+Mutual Information,bmi,0.8,False
+Mutual Information,diastolic_bp,0.4,False
+Mutual Information,education,1.0,False
+Mutual Information,fasting_glucose,1.0,True
+Mutual Information,hba1c,1.0,True
+Mutual Information,hdl_cholesterol,0.4,False
+Mutual Information,systolic_bp,0.4,False
+Mutual Information,total_cholesterol,0.8,False
+Mutual Information,waist,1.0,False
+Mutual Information,weight,0.2,False
+Oracle Trap Exclusion + SHAP,age,1.0,False
+Oracle Trap Exclusion + SHAP,bmi,1.0,False
+Oracle Trap Exclusion + SHAP,diastolic_bp,0.2,False
+Oracle Trap Exclusion + SHAP,education,0.4,False
+Oracle Trap Exclusion + SHAP,hdl_cholesterol,0.8,False
+Oracle Trap Exclusion + SHAP,prediabetes_told,1.0,False
+Oracle Trap Exclusion + SHAP,race_ethnicity,0.6,False
+Oracle Trap Exclusion + SHAP,systolic_bp,1.0,False
+Oracle Trap Exclusion + SHAP,total_cholesterol,1.0,False
+Oracle Trap Exclusion + SHAP,waist,1.0,False
+PSEUL-Audit,age,1.0,False
+PSEUL-Audit,bmi,1.0,False
+PSEUL-Audit,fasting_glucose,1.0,True
+PSEUL-Audit,hba1c,1.0,True
+PSEUL-Audit,prediabetes_told,1.0,False
+PSEUL-Audit,sedentary_minutes,0.6,False
+PSEUL-Audit,systolic_bp,0.6,False
+PSEUL-Audit,waist,1.0,False
+PSEUL-Audit,weight,0.8,False
+PSEUL-Auto (neutral metadata),age,1.0,False
+PSEUL-Auto (neutral metadata),diastolic_bp,0.4,False
+PSEUL-Auto (neutral metadata),fasting_glucose,1.0,True
+PSEUL-Auto (neutral metadata),hba1c,1.0,True
+PSEUL-Auto (neutral metadata),income_ratio,1.0,False
+PSEUL-Auto (neutral metadata),prediabetes_told,1.0,False
+PSEUL-Auto (neutral metadata),race_ethnicity,0.6,False
+PSEUL-Auto (neutral metadata),sedentary_minutes,0.8,False
+PSEUL-Auto (neutral metadata),sex_male,0.6,False
+PSEUL-Auto (neutral metadata),total_cholesterol,0.6,False
+PSEUL-Select,age,1.0,False
+PSEUL-Select,bmi,1.0,False
+PSEUL-Select,diastolic_bp,0.4,False
+PSEUL-Select,hdl_cholesterol,0.2,False
+PSEUL-Select,income_ratio,0.2,False
+PSEUL-Select,prediabetes_told,1.0,False
+PSEUL-Select,race_ethnicity,0.6,False
+PSEUL-Select,sedentary_minutes,1.0,False
+PSEUL-Select,systolic_bp,0.6,False
+PSEUL-Select,total_cholesterol,1.0,False
+PSEUL-Select,waist,0.8,False
+PSEUL-Select,weight,0.2,False
+Permutation Importance,age,1.0,False
+Permutation Importance,bmi,0.4,False
+Permutation Importance,diastolic_bp,0.8,False
+Permutation Importance,education,0.2,False
+Permutation Importance,fasting_glucose,1.0,True
+Permutation Importance,hba1c,1.0,True
+Permutation Importance,hdl_cholesterol,0.2,False
+Permutation Importance,prediabetes_told,1.0,False
+Permutation Importance,sedentary_minutes,0.6,False
+Permutation Importance,total_cholesterol,1.0,False
+Permutation Importance,waist,0.8,False
+SHAP Ranking,age,1.0,False
+SHAP Ranking,bmi,0.8,False
+SHAP Ranking,diastolic_bp,0.6,False
+SHAP Ranking,fasting_glucose,1.0,True
+SHAP Ranking,hba1c,1.0,True
+SHAP Ranking,prediabetes_told,1.0,False
+SHAP Ranking,sedentary_minutes,0.4,False
+SHAP Ranking,systolic_bp,0.2,False
+SHAP Ranking,total_cholesterol,1.0,False
+SHAP Ranking,waist,1.0,False
+SHAP Regression Proxy,age,0.6,False
+SHAP Regression Proxy,diastolic_bp,0.4,False
+SHAP Regression Proxy,education,0.2,False
+SHAP Regression Proxy,fasting_glucose,1.0,True
+SHAP Regression Proxy,hba1c,1.0,True
+SHAP Regression Proxy,prediabetes_told,0.2,False
+SHAP Regression Proxy,sedentary_minutes,0.6,False
+SHAP Regression Proxy,total_cholesterol,0.8,False
+SHAP Regression Proxy,waist,0.2,False

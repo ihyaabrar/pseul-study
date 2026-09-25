@@ -1,0 +1,219 @@
+{
+  "study": "diabetes130_admission",
+  "run_label": "full",
+  "spec": {
+    "key": "diabetes130_admission",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Admission-time 30-day readmission risk stress test",
+    "intended_use": "Identify patients for discharge-planning attention using information available at admission",
+    "prediction_landmark": "Hospital admission",
+    "observation_window": "History and administrative information available no later than admission",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First encounter per patient; death/hospice encounters are retained because discharge status is unknown at admission and are acknowledged as competing events",
+    "top_k": 5,
+    "canonical_traps": [
+      "time_in_hospital",
+      "num_lab_procedures",
+      "num_procedures",
+      "num_medications",
+      "number_diagnoses",
+      "discharge_disposition_id",
+      "a1c_ordinal",
+      "max_glu_ordinal",
+      "insulin_ordinal",
+      "change_flag",
+      "diabetesMed_flag"
+    ],
+    "leakage_mechanism": "Information recorded after the admission landmark",
+    "evidence_status": "Landmark-defined temporal availability stress test",
+    "interpretation": "Prior-year utilization counts remain valid admission-time predictors."
+  },
+  "metadata": {
+    "source_file": "D:\\Tesis\\Jurnal 2\\paper5\\data\\diabetes130\\diabetic_data.csv",
+    "raw_rows": 101766,
+    "unique_patient_rows": 71518,
+    "death_hospice_rows_before_filter": 1545,
+    "death_hospice_excluded": false,
+    "death_hospice_dispositions": [
+      11,
+      13,
+      14,
+      19,
+      20,
+      21
+    ],
+    "key": "diabetes130_admission",
+    "dataset": "UCI Diabetes 130-US Hospitals",
+    "task_type": "Admission-time 30-day readmission risk stress test",
+    "intended_use": "Identify patients for discharge-planning attention using information available at admission",
+    "prediction_landmark": "Hospital admission",
+    "observation_window": "History and administrative information available no later than admission",
+    "prediction_horizon": "Readmission within 30 days after discharge",
+    "eligible_population": "First encounter per patient; death/hospice encounters are retained because discharge status is unknown at admission and are acknowledged as competing events",
+    "top_k": 5,
+    "canonical_traps": [
+      "time_in_hospital",
+      "num_lab_procedures",
+      "num_procedures",
+      "num_medications",
+      "number_diagnoses",
+      "discharge_disposition_id",
+      "a1c_ordinal",
+      "max_glu_ordinal",
+      "insulin_ordinal",
+      "change_flag",
+      "diabetesMed_flag"
+    ],
+    "leakage_mechanism": "Information recorded after the admission landmark",
+    "evidence_status": "Landmark-defined temporal availability stress test",
+    "interpretation": "Prior-year utilization counts remain valid admission-time predictors.",
+    "rows": 71518,
+    "features": 18,
+    "positive_rate": 0.08799183422355211,
+    "missing_cells": 0,
+    "analysis_subsample": 40000
+  },
+  "outer_splits": 5,
+  "inner_splits": 3,
+  "test_size": 0.2,
+  "test_evaluated": true,
+  "include_proxy_baselines": false,
+  "include_auto_ablation": true,
+  "random_state": 42,
+  "development_rows": 32000,
+  "test_rows": 8000,
+  "development_test_overlap": 0,
+  "fold_audits": [
+    {
+      "fold": 1,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "d3428c878c563d8b706c5b7f54bed428ec8c3a95c92eea59be9da5e9b878bd69",
+      "outer_train_index_hash": "d3428c878c563d8b706c5b7f54bed428ec8c3a95c92eea59be9da5e9b878bd69",
+      "outer_valid_index_hash": "fa189cb4649a03510b2ca0a5c69b977c1a288562bf11cbc3adeda258c6f014a4",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "40e48e6f6452fc984bbe4ba4d51e956c0ad04e53a9256e6b74a19c593f455568",
+      "outer_train_index_hash": "40e48e6f6452fc984bbe4ba4d51e956c0ad04e53a9256e6b74a19c593f455568",
+      "outer_valid_index_hash": "f09bd9fe50d2138d7d173d6f1b1cf9a4fe120b466659edbfde659a0ce6c2a70e",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "8f28aa595c1fa4ec8d2e84222dae82e0908219fa35a7028b97cafcca8ae4e2ef",
+      "outer_train_index_hash": "8f28aa595c1fa4ec8d2e84222dae82e0908219fa35a7028b97cafcca8ae4e2ef",
+      "outer_valid_index_hash": "341e03739a2bbe9d7c631c5bf0764d37f6944f08d28a44922ac14f7e9268cd63",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "27b1ddaa60b0f75d47f8550608cd7ee49d0ab676ab28fa848012239864d18cc2",
+      "outer_train_index_hash": "27b1ddaa60b0f75d47f8550608cd7ee49d0ab676ab28fa848012239864d18cc2",
+      "outer_valid_index_hash": "2e86134c725bfede7b308a54e43f6fb6761c861d5ea1a6e60bc99ac679bcd839",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "imputer_fit_rows": 25600,
+      "imputer_fit_index_hash": "c3566c8deb31235e544d62baa98caa92d1d8d5b7e3219b9d3193fe6e93d4d3f8",
+      "outer_train_index_hash": "c3566c8deb31235e544d62baa98caa92d1d8d5b7e3219b9d3193fe6e93d4d3f8",
+      "outer_valid_index_hash": "5a32f8e38e0b79fc04b3df5fdeeebec5ab3bf839fca8c2b10040294bfdefc8fc",
+      "train_validation_overlap": 0,
+      "selector_scope": "outer-training only",
+      "proxy_details": {
+        "PSEUL-Auto control audit": {
+          "same_seed_and_inner_folds": true,
+          "retained_metadata": [
+            "evidence",
+            "topic_similarity",
+            "utility",
+            "availability"
+          ],
+          "nulled_metadata": [
+            "label_derived_risk",
+            "definitional_overlap",
+            "target_proxy_strength"
+          ],
+          "max_abs_signal_difference": 0.0
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 742.8947954177856
+}

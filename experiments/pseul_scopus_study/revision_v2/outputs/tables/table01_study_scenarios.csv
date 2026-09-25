@@ -1,0 +1,6 @@
+Scenario,Task,Prediction landmark,Analysis n,Positive rate,Candidate features,Designated traps
+adherence,Retrospective classification,End of the recorded adherence assessment period,24071,0.402,11,2
+nhanes,Cross-sectional classification stress test,Survey/examination assessment,7806,0.167,17,2
+brfss,Cross-sectional structural-leakage stress test,Survey interview,50000,0.145,18,4
+diabetes130_admission,Admission-time 30-day readmission risk stress test,Hospital admission,40000,0.088,18,11
+diabetes130_discharge,Discharge-time 30-day readmission risk prediction,Immediately before discharge,40000,0.09,18,0

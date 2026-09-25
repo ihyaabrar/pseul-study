@@ -1,0 +1,91 @@
+method,feature,selection_frequency,canonical_trap
+All Features,a1c_ordinal,1.0,True
+All Features,admission_source_id,1.0,False
+All Features,admission_type_id,1.0,False
+All Features,age_ordinal,1.0,False
+All Features,change_flag,1.0,True
+All Features,diabetesMed_flag,1.0,True
+All Features,discharge_disposition_id,1.0,True
+All Features,gender_male,1.0,False
+All Features,insulin_ordinal,1.0,True
+All Features,max_glu_ordinal,1.0,True
+All Features,num_lab_procedures,1.0,True
+All Features,num_medications,1.0,True
+All Features,num_procedures,1.0,True
+All Features,number_diagnoses,1.0,True
+All Features,number_emergency,1.0,False
+All Features,number_inpatient,1.0,False
+All Features,number_outpatient,1.0,False
+All Features,time_in_hospital,1.0,True
+Availability Gate + SHAP,admission_source_id,1.0,False
+Availability Gate + SHAP,admission_type_id,1.0,False
+Availability Gate + SHAP,age_ordinal,1.0,False
+Availability Gate + SHAP,gender_male,0.2,False
+Availability Gate + SHAP,number_emergency,0.6,False
+Availability Gate + SHAP,number_inpatient,1.0,False
+Availability Gate + SHAP,number_outpatient,0.2,False
+LightGBM Gain,age_ordinal,1.0,False
+LightGBM Gain,discharge_disposition_id,1.0,True
+LightGBM Gain,num_lab_procedures,1.0,True
+LightGBM Gain,num_medications,1.0,True
+LightGBM Gain,time_in_hospital,1.0,True
+Mutual Information,age_ordinal,0.2,False
+Mutual Information,change_flag,0.6,True
+Mutual Information,diabetesMed_flag,0.8,True
+Mutual Information,discharge_disposition_id,1.0,True
+Mutual Information,gender_male,0.4,False
+Mutual Information,max_glu_ordinal,0.2,True
+Mutual Information,number_diagnoses,0.2,True
+Mutual Information,number_emergency,0.2,False
+Mutual Information,number_inpatient,1.0,False
+Mutual Information,time_in_hospital,0.4,True
+Oracle Trap Exclusion + SHAP,admission_source_id,1.0,False
+Oracle Trap Exclusion + SHAP,admission_type_id,1.0,False
+Oracle Trap Exclusion + SHAP,age_ordinal,1.0,False
+Oracle Trap Exclusion + SHAP,gender_male,0.6,False
+Oracle Trap Exclusion + SHAP,number_emergency,0.2,False
+Oracle Trap Exclusion + SHAP,number_inpatient,1.0,False
+Oracle Trap Exclusion + SHAP,number_outpatient,0.2,False
+PSEUL-Audit,a1c_ordinal,0.6,True
+PSEUL-Audit,age_ordinal,1.0,False
+PSEUL-Audit,discharge_disposition_id,1.0,True
+PSEUL-Audit,number_diagnoses,0.2,True
+PSEUL-Audit,number_emergency,0.2,False
+PSEUL-Audit,number_inpatient,1.0,False
+PSEUL-Audit,time_in_hospital,1.0,True
+PSEUL-Auto (leakage metadata null),admission_type_id,1.0,False
+PSEUL-Auto (leakage metadata null),age_ordinal,1.0,False
+PSEUL-Auto (leakage metadata null),gender_male,0.4,False
+PSEUL-Auto (leakage metadata null),number_emergency,0.8,False
+PSEUL-Auto (leakage metadata null),number_inpatient,1.0,False
+PSEUL-Auto (leakage metadata null),number_outpatient,0.8,False
+PSEUL-Select,admission_type_id,1.0,False
+PSEUL-Select,age_ordinal,1.0,False
+PSEUL-Select,gender_male,0.4,False
+PSEUL-Select,number_emergency,0.8,False
+PSEUL-Select,number_inpatient,1.0,False
+PSEUL-Select,number_outpatient,0.8,False
+Permutation Importance,a1c_ordinal,0.2,True
+Permutation Importance,admission_source_id,0.2,False
+Permutation Importance,admission_type_id,0.2,False
+Permutation Importance,age_ordinal,0.6,False
+Permutation Importance,diabetesMed_flag,0.4,True
+Permutation Importance,discharge_disposition_id,1.0,True
+Permutation Importance,num_lab_procedures,0.6,True
+Permutation Importance,num_medications,0.2,True
+Permutation Importance,number_inpatient,1.0,False
+Permutation Importance,time_in_hospital,0.6,True
+SHAP Ranking,age_ordinal,1.0,False
+SHAP Ranking,diabetesMed_flag,0.2,True
+SHAP Ranking,discharge_disposition_id,1.0,True
+SHAP Ranking,num_lab_procedures,0.6,True
+SHAP Ranking,num_medications,0.4,True
+SHAP Ranking,number_inpatient,1.0,False
+SHAP Ranking,time_in_hospital,0.8,True
+Semantic Veto + SHAP,admission_source_id,1.0,False
+Semantic Veto + SHAP,admission_type_id,1.0,False
+Semantic Veto + SHAP,age_ordinal,1.0,False
+Semantic Veto + SHAP,gender_male,0.2,False
+Semantic Veto + SHAP,number_emergency,0.6,False
+Semantic Veto + SHAP,number_inpatient,1.0,False
+Semantic Veto + SHAP,number_outpatient,0.2,False

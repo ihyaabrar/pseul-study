@@ -1,0 +1,8 @@
+{
+  "study": "nhanes",
+  "run_label": "full",
+  "auc_inference": "paired DeLong",
+  "mcc_inference": "paired stratified multinomial bootstrap",
+  "mcc_bootstrap_replicates": 2000,
+  "multiplicity": "Holm correction within metric across PSEUL-Select comparisons"
+}

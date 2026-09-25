@@ -1,0 +1,12 @@
+method,features,n_features,avg_leakage_risk,avg_clinical_utility,designated_traps_selected,designated_trap_fraction,prediction_unavailable_selected
+All Features,"[""time_in_hospital"", ""num_lab_procedures"", ""num_procedures"", ""num_medications"", ""number_outpatient"", ""number_emergency"", ""number_inpatient"", ""number_diagnoses"", ""discharge_disposition_id"", ""admission_source_id"", ""admission_type_id"", ""age_ordinal"", ""gender_male"", ""a1c_ordinal"", ""max_glu_ordinal"", ""insulin_ordinal"", ""change_flag"", ""diabetesMed_flag""]",18,0.3697948126936538,0.5111111111111112,11,1.0,11
+Mutual Information,"[""discharge_disposition_id"", ""diabetesMed_flag"", ""admission_type_id"", ""age_ordinal"", ""number_inpatient""]",5,0.3379792864787246,0.5466666666666666,2,0.18181818181818182,2
+LightGBM Gain,"[""num_lab_procedures"", ""num_medications"", ""discharge_disposition_id"", ""time_in_hospital"", ""age_ordinal""]",5,0.4786014864688303,0.5166666666666667,4,0.36363636363636365,4
+Permutation Importance,"[""discharge_disposition_id"", ""number_inpatient"", ""number_diagnoses"", ""num_medications"", ""age_ordinal""]",5,0.4561191974055143,0.5366666666666666,3,0.2727272727272727,3
+SHAP Ranking,"[""discharge_disposition_id"", ""number_inpatient"", ""age_ordinal"", ""time_in_hospital"", ""num_lab_procedures""]",5,0.44102304547790416,0.5333333333333333,3,0.2727272727272727,3
+Availability Gate + SHAP,"[""number_inpatient"", ""age_ordinal"", ""admission_source_id"", ""number_emergency"", ""admission_type_id""]",5,0.16001371171550036,0.5900000000000001,0,0.0,0
+Semantic Veto + SHAP,"[""number_inpatient"", ""age_ordinal"", ""admission_source_id"", ""number_emergency"", ""admission_type_id""]",5,0.16001371171550036,0.5900000000000001,0,0.0,0
+PSEUL-Select,"[""age_ordinal"", ""number_inpatient"", ""number_emergency"", ""admission_type_id"", ""number_outpatient""]",5,0.15029770137348356,0.6066666666666667,0,0.0,0
+PSEUL-Audit,"[""discharge_disposition_id"", ""number_inpatient"", ""age_ordinal"", ""a1c_ordinal"", ""time_in_hospital""]",5,0.43388910104278694,0.55,3,0.2727272727272727,3
+PSEUL-Auto (leakage metadata null),"[""number_inpatient"", ""age_ordinal"", ""number_emergency"", ""admission_type_id"", ""number_outpatient""]",5,0.15029770137348356,0.6066666666666667,0,0.0,0
+Oracle Trap Exclusion + SHAP,"[""age_ordinal"", ""number_inpatient"", ""admission_source_id"", ""admission_type_id"", ""gender_male""]",5,0.13172199508896937,0.58,0,0.0,0
