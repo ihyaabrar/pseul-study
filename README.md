@@ -202,7 +202,8 @@ file matching. Each `outputs/<scenario>/full/pipeline_audit.json` must report:
 ## Citing
 
 The paper is under review. Until it is published, cite this repository through
-[`CITATION.cff`](CITATION.cff).
+[`CITATION.cff`](CITATION.cff). To cite the method as software, use its Zenodo
+archive: [doi:10.5281/zenodo.23227664](https://doi.org/10.5281/zenodo.23227664).
 
 ## Licence
 
