@@ -1,0 +1,26 @@
+study,method,auc,average_precision,mcc,n_features,designated_traps_selected
+adherence,All Features,0.903,0.826,0.637,11,2
+adherence,Availability Gate + SHAP,0.901,0.821,0.645,5,2
+adherence,Gate + Veto + SHAP,0.837,0.731,0.519,5,1
+adherence,Oracle Trap Exclusion + SHAP,0.661,0.534,0.206,5,0
+adherence,PSEUL-Select,0.838,0.732,0.52,5,1
+nhanes,All Features,0.942,0.864,0.773,17,2
+nhanes,Availability Gate + SHAP,0.937,0.853,0.76,8,2
+nhanes,Gate + Veto + SHAP,0.778,0.401,0.243,8,0
+nhanes,Oracle Trap Exclusion + SHAP,0.792,0.411,0.245,8,0
+nhanes,PSEUL-Select,0.778,0.402,0.233,8,0
+brfss,All Features,1.0,1.0,1.0,18,4
+brfss,Availability Gate + SHAP,1.0,1.0,1.0,8,3
+brfss,Gate + Veto + SHAP,0.807,0.398,0.188,8,0
+brfss,Oracle Trap Exclusion + SHAP,0.808,0.405,0.214,8,0
+brfss,PSEUL-Select,0.802,0.396,0.201,8,0
+diabetes130_admission,All Features,0.639,0.166,0.069,18,11
+diabetes130_admission,Availability Gate + SHAP,0.569,0.125,0.04,5,0
+diabetes130_admission,Gate + Veto + SHAP,0.569,0.125,0.04,5,0
+diabetes130_admission,Oracle Trap Exclusion + SHAP,0.564,0.125,0.031,5,0
+diabetes130_admission,PSEUL-Select,0.566,0.122,0.038,5,0
+diabetes130_discharge,All Features,0.631,0.158,0.045,18,0
+diabetes130_discharge,Availability Gate + SHAP,0.628,0.149,0.022,5,0
+diabetes130_discharge,Gate + Veto + SHAP,0.628,0.149,0.022,5,0
+diabetes130_discharge,Oracle Trap Exclusion + SHAP,0.628,0.149,0.022,5,0
+diabetes130_discharge,PSEUL-Select,0.622,0.151,0.045,5,0

@@ -63,7 +63,7 @@ SHORT_METHOD = {
     "PSEUL-Select": "PSEUL-Select",
     "PSEUL-Auto (leakage metadata null)": "PSEUL-Auto",
     "Oracle Trap Exclusion + SHAP": "Oracle exclusion",
-    "Semantic Veto + SHAP": "Veto + SHAP",
+    "Semantic Veto + SHAP": "Gate + Veto + SHAP",
 }
 
 SCENARIO_LABELS = {
@@ -499,7 +499,7 @@ MATRIX_METHOD_LABELS = {
     "PSEUL-Select": "PSEUL-\nSelect",
     "PSEUL-Auto (leakage metadata null)": "PSEUL-\nAuto",
     "Oracle Trap Exclusion + SHAP": "Oracle\nexclusion",
-    "Semantic Veto + SHAP": "Veto +\nSHAP",
+    "Semantic Veto + SHAP": "Gate + Veto\n+ SHAP",
 }
 
 
@@ -516,6 +516,12 @@ def _ramp(name, end):
     """White to `end`. A single-hue ramp is monotone in luminance, so it keeps
     its ordering when ECTI prints the page in greyscale."""
     return LinearSegmentedColormap.from_list(name, ["#FFFFFF", end])
+
+
+# Figs. 3-5 print 16.6 cm wide. Drawn at ~10 in, their 8.5 pt text printed near
+# 5.5 pt; shrinking the canvas at a fixed aspect prints the same text ~1.3x larger
+# without changing the figure's height on the page (review council item R6).
+PRINT_SCALE = 0.78
 
 
 def figure_enforcement_cost() -> None:
@@ -536,7 +542,7 @@ def figure_enforcement_cost() -> None:
              .pivot_table(index="study", columns="method", values="auc")
              .reindex(studies))
 
-    fig, ax = plt.subplots(figsize=(9.4, 3.9))
+    fig, ax = plt.subplots(figsize=(9.4 * PRINT_SCALE, 3.9 * PRINT_SCALE))
     y = np.arange(len(studies))
     offsets = np.linspace(-0.28, 0.28, len(PLOTTED_METHODS))
 
@@ -630,7 +636,7 @@ def figure_traps_and_stability() -> None:
                 .pivot_table(index="study", columns="method", values=column)
                 .reindex(index=studies, columns=PLOTTED_METHODS))
 
-    fig, axes = plt.subplots(1, 2, figsize=(10.6, 3.5),
+    fig, axes = plt.subplots(1, 2, figsize=(10.6 * PRINT_SCALE, 3.5 * PRINT_SCALE),
                              gridspec_kw={"wspace": 0.10, "width_ratios": [1, 1]})
     _matrix_panel(axes[0], grid(traps, "mean_trap_selection_frequency"), studies,
                   _ramp("traps", COLORS["blue"]),
@@ -643,7 +649,7 @@ def figure_traps_and_stability() -> None:
     fig.text(0.008, 0.005, "—  no designated traps in that scenario        "
              "shading: panel a 0–1, panel b 0.60–1", fontsize=8.6,
              style="italic", color=COLORS["muted"])
-    fig.subplots_adjust(left=0.135, right=0.995, top=0.84, bottom=0.13)
+    fig.subplots_adjust(left=0.135, right=0.995, top=0.84, bottom=0.25)
     _save(fig, "fig04_traps_and_stability")
 
 
@@ -677,7 +683,7 @@ def figure_veto_threshold_sensitivity() -> None:
     # and carry the identity into greyscale as well
     dashes = ["solid", (0, (5, 2)), (0, (1, 1.6)), (0, (6, 1.6, 1, 1.6)), (0, (3, 1.4))]
 
-    fig, axes = plt.subplots(1, 2, figsize=(10.0, 3.4),
+    fig, axes = plt.subplots(1, 2, figsize=(10.0 * PRINT_SCALE, 3.4 * PRINT_SCALE),
                              gridspec_kw={"wspace": 0.24})
 
     flat = []

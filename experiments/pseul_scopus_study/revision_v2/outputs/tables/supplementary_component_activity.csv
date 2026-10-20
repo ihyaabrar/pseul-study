@@ -1,0 +1,6 @@
+study,candidates,excluded_by_landmark_gate,excluded_by_semantic_veto,vetoable_but_already_gated,utility_gate_below_1,admissible_with_penalty_below_0_5,min_penalty_admissible,score_floor_stopped_selection_folds,redundancy_changed_subset_folds,uncertainty_weight
+adherence,11,0,1,0,0,0,0.859,0,0,0.0
+nhanes,17,0,2,0,0,0,0.887,0,4,0.0
+brfss,18,0,4,0,0,0,0.984,0,5,0.0
+diabetes130_admission,18,11,0,11,0,0,0.917,0,0,0.0
+diabetes130_discharge,18,0,0,0,0,0,0.835,0,1,0.0

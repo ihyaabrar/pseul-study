@@ -1,0 +1,25 @@
+run,method,oof_auc,oof_mcc,traps_selected_per_fold
+both controls (primary),All Features,0.636,0.02,11.0
+both controls (primary),Availability Gate + SHAP,0.565,0.02,0.0
+both controls (primary),Gate + Veto + SHAP,0.565,0.02,0.0
+both controls (primary),PSEUL-Select,0.572,0.026,0.0
+landmark gate only,All Features,0.636,0.02,11.0
+landmark gate only,Availability Gate + SHAP,0.565,0.02,0.0
+landmark gate only,Gate + Veto + SHAP,0.565,0.02,0.0
+landmark gate only,PSEUL-Select,0.572,0.026,0.0
+semantic veto only,All Features,0.636,0.02,11.0
+semantic veto only,Availability Gate + SHAP,0.624,0.027,3.0
+semantic veto only,Gate + Veto + SHAP,0.565,0.02,0.0
+semantic veto only,PSEUL-Select,0.572,0.026,0.0
+neither control,All Features,0.636,0.02,11.0
+neither control,Availability Gate + SHAP,0.624,0.027,3.0
+neither control,Gate + Veto + SHAP,0.583,0.027,3.0
+neither control,PSEUL-Select,0.582,0.017,3.0
+"admission registry, discharge cohort",All Features,0.642,0.048,11.0
+"admission registry, discharge cohort",Availability Gate + SHAP,0.571,0.044,0.0
+"admission registry, discharge cohort",Gate + Veto + SHAP,0.571,0.044,0.0
+"admission registry, discharge cohort",PSEUL-Select,0.579,0.04,0.0
+"discharge registry, discharge cohort (primary)",All Features,0.642,0.048,0.0
+"discharge registry, discharge cohort (primary)",Availability Gate + SHAP,0.628,0.039,0.0
+"discharge registry, discharge cohort (primary)",Gate + Veto + SHAP,0.628,0.039,0.0
+"discharge registry, discharge cohort (primary)",PSEUL-Select,0.619,0.028,0.0

@@ -1,0 +1,19 @@
+metric,reference,comparator,mean_fold_delta,signed_rank_biserial,n_outer_folds,inference_status
+auc,PSEUL-Select,All Features,-0.05435216508159957,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,Availability Gate + SHAP,-0.042701976043465636,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,LightGBM Gain,-0.01384081399706123,-0.7333333333333333,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,Mutual Information,-0.0459814482293051,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,Oracle Trap Exclusion + SHAP,0.015525065954125238,1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,PSEUL-Audit,-0.04701655257242523,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,Permutation Importance,-0.04293253935421411,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,SHAP Ranking,-0.042701976043465636,-1.0,5,descriptive; folds are not independent replications
+auc,PSEUL-Select,Semantic Veto + SHAP,-0.000893152407846598,-0.06666666666666667,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,All Features,-0.0033658921169600923,-0.2,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,Availability Gate + SHAP,-0.008591447021852789,-0.3333333333333333,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,LightGBM Gain,-0.00119062143403472,-0.06666666666666667,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,Mutual Information,-0.008846570072809134,-0.3333333333333333,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,Oracle Trap Exclusion + SHAP,0.0022027776504766174,0.3333333333333333,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,PSEUL-Audit,-0.020966160577765014,-0.6,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,Permutation Importance,-0.009885397878007898,-0.2,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,SHAP Ranking,-0.008591447021852789,-0.3333333333333333,5,descriptive; folds are not independent replications
+mcc,PSEUL-Select,Semantic Veto + SHAP,-0.009328390494116219,-0.6,5,descriptive; folds are not independent replications

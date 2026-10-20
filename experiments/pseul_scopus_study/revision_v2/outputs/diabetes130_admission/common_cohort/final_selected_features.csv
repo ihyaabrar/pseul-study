@@ -1,0 +1,11 @@
+method,features,n_features,avg_leakage_risk,avg_clinical_utility,designated_traps_selected,designated_trap_fraction,prediction_unavailable_selected
+All Features,"[""time_in_hospital"", ""num_lab_procedures"", ""num_procedures"", ""num_medications"", ""number_outpatient"", ""number_emergency"", ""number_inpatient"", ""number_diagnoses"", ""discharge_disposition_id"", ""admission_source_id"", ""admission_type_id"", ""age_ordinal"", ""gender_male"", ""a1c_ordinal"", ""max_glu_ordinal"", ""insulin_ordinal"", ""change_flag"", ""diabetesMed_flag""]",18,0.37516531403451686,0.5111111111111112,11,1.0,11
+Mutual Information,"[""discharge_disposition_id"", ""number_diagnoses"", ""time_in_hospital"", ""diabetesMed_flag"", ""age_ordinal""]",5,0.5092309798803807,0.5166666666666666,4,0.36363636363636365,4
+LightGBM Gain,"[""num_lab_procedures"", ""num_medications"", ""time_in_hospital"", ""discharge_disposition_id"", ""number_diagnoses""]",5,0.5948674941339265,0.4666666666666667,5,0.45454545454545453,5
+Permutation Importance,"[""discharge_disposition_id"", ""number_inpatient"", ""time_in_hospital"", ""num_medications"", ""num_lab_procedures""]",5,0.5365451738294512,0.48999999999999994,4,0.36363636363636365,4
+SHAP Ranking,"[""discharge_disposition_id"", ""number_inpatient"", ""time_in_hospital"", ""num_lab_procedures"", ""age_ordinal""]",5,0.45041076971437366,0.5333333333333333,3,0.2727272727272727,3
+Availability Gate + SHAP,"[""number_inpatient"", ""age_ordinal"", ""admission_type_id"", ""number_emergency"", ""admission_source_id""]",5,0.16210332369228891,0.5900000000000001,0,0.0,0
+Semantic Veto + SHAP,"[""number_inpatient"", ""age_ordinal"", ""admission_type_id"", ""number_emergency"", ""admission_source_id""]",5,0.16210332369228891,0.5900000000000001,0,0.0,0
+PSEUL-Select,"[""number_inpatient"", ""age_ordinal"", ""number_emergency"", ""admission_type_id"", ""admission_source_id""]",5,0.16210332369228891,0.5900000000000001,0,0.0,0
+PSEUL-Audit,"[""discharge_disposition_id"", ""number_inpatient"", ""age_ordinal"", ""time_in_hospital"", ""num_medications""]",5,0.45467555584484665,0.5466666666666666,3,0.2727272727272727,3
+Oracle Trap Exclusion + SHAP,"[""age_ordinal"", ""number_inpatient"", ""admission_type_id"", ""admission_source_id"", ""number_outpatient""]",5,0.1471182184765854,0.5866666666666667,0,0.0,0

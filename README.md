@@ -164,6 +164,19 @@ The proxies are simplified implementations of the mechanisms. They do not
 reproduce the original authors' software, and they are not a head-to-head
 benchmark.
 
+Three Diabetes 130 runs answer review questions (Supplementary Tables S9 to S11).
+They separate the landmark gate from the semantic veto at admission, and apply
+the admission registry to the discharge cohort, so that both landmarks are
+compared on identical records and folds:
+
+```bash
+python -m experiments.pseul_scopus_study.revision_v2.council_revision_runs
+for l in factorial_gate_only factorial_veto_only factorial_neither common_cohort; do
+  python -m experiments.pseul_scopus_study.revision_v2.postprocess_run diabetes130_admission --run-label $l --bootstrap 2000
+done
+python -m experiments.pseul_scopus_study.revision_v2.council_tables
+```
+
 ## Verify
 
 ```bash
